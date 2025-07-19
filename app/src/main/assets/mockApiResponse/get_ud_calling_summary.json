@@ -1,0 +1,167 @@
+{
+  "status": true,
+  "response": {
+    "description": "Success",
+    "page_count": 1,
+    "ud_shipment": [
+      {
+        "awb_no": 715547255,
+        "drs_id": 95832641,
+        "product_type": "FWD",
+        "payment_type": "COD",
+        "ud_time_stamp": "2024-10-11 04:31 AM",
+        "fe_name": "ESPPAutomationsdjklESPPAutomation",
+        "fe_emp_code": "AUTOTEST56"
+      },
+      {
+        "awb_no": 715547260,
+        "drs_id": 95832649,
+        "product_type": "FWD",
+        "payment_type": "COD",
+        "ud_time_stamp": "2024-10-11 04:33 AM",
+        "fe_name": "ESPPAutomation ESPPAutomation",
+        "fe_emp_code": "AUTOTEST36"
+      },
+      {
+        "awb_no": 715547267,
+        "drs_id": 95832664,
+        "product_type": "FWD",
+        "payment_type": "COD",
+        "ud_time_stamp": "2024-10-11 04:36 AM",
+        "fe_name": "ESPPAutomation ESPPAutomation",
+        "fe_emp_code": "AUTOT131"
+      },
+      {
+        "awb_no": 118542989,
+        "drs_id": 95832670,
+        "product_type": "FWD",
+        "payment_type": "PPD",
+        "ud_time_stamp": "2024-10-11 04:36 AM",
+        "fe_name": "ESPPAutomation ESPPAutomation",
+        "fe_emp_code": "AUTOTEST48"
+      },
+      {
+        "awb_no": 715547268,
+        "drs_id": 95832669,
+        "product_type": "FWD",
+        "payment_type": "COD",
+        "ud_time_stamp": "2024-10-11 04:36 AM",
+        "fe_name": "ESPPAutomation ESPPAutomation",
+        "fe_emp_code": "AUTOT131"
+      }
+    ,
+      {
+        "awb_no": 715547260,
+        "drs_id": 95832649,
+        "product_type": "FWD",
+        "payment_type": "COD",
+        "ud_time_stamp": "2024-10-11 04:33 AM",
+        "fe_name": "ESPPAutomation ESPPAutomation",
+        "fe_emp_code": "AUTOTEST36"
+      },
+      {
+        "awb_no": 715547267,
+        "drs_id": 95832664,
+        "product_type": "FWD",
+        "payment_type": "COD",
+        "ud_time_stamp": "2024-10-11 04:36 AM",
+        "fe_name": "ESPPAutomation ESPPAutomation",
+        "fe_emp_code": "AUTOT131"
+      },
+      {
+        "awb_no": 118542989,
+        "drs_id": 95832670,
+        "product_type": "FWD",
+        "payment_type": "PPD",
+        "ud_time_stamp": "2024-10-11 04:36 AM",
+        "fe_name": "ESPPAutomation ESPPAutomation",
+        "fe_emp_code": "AUTOTEST48"
+      },
+      {
+        "awb_no": 715547268,
+        "drs_id": 95832669,
+        "product_type": "FWD",
+        "payment_type": "COD",
+        "ud_time_stamp": "2024-10-11 04:36 AM",
+        "fe_name": "ESPPAutomation ESPPAutomation",
+        "fe_emp_code": "AUTOT131"
+      }
+    ,
+      {
+        "awb_no": 715547260,
+        "drs_id": 95832649,
+        "product_type": "FWD",
+        "payment_type": "COD",
+        "ud_time_stamp": "2024-10-11 04:33 AM",
+        "fe_name": "ESPPAutomation ESPPAutomation",
+        "fe_emp_code": "AUTOTEST36"
+      },
+      {
+        "awb_no": 715547267,
+        "drs_id": 95832664,
+        "product_type": "FWD",
+        "payment_type": "COD",
+        "ud_time_stamp": "2024-10-11 04:36 AM",
+        "fe_name": "ESPPAutomation ESPPAutomation",
+        "fe_emp_code": "AUTOT131"
+      },
+      {
+        "awb_no": 118542989,
+        "drs_id": 95832670,
+        "product_type": "FWD",
+        "payment_type": "PPD",
+        "ud_time_stamp": "2024-10-11 04:36 AM",
+        "fe_name": "ESPPAutomation ESPPAutomation",
+        "fe_emp_code": "AUTOTEST48"
+      },
+      {
+        "awb_no": 715547268,
+        "drs_id": 95832669,
+        "product_type": "FWD",
+        "payment_type": "COD",
+        "ud_time_stamp": "2024-10-11 04:36 AM",
+        "fe_name": "ESPPAutomation ESPPAutomation",
+        "fe_emp_code": "AUTOT131"
+      }
+    ,
+      {
+        "awb_no": 715547260,
+        "drs_id": 95832649,
+        "product_type": "FWD",
+        "payment_type": "COD",
+        "ud_time_stamp": "2024-10-11 04:33 AM",
+        "fe_name": "ESPPAutomation ESPPAutomation",
+        "fe_emp_code": "AUTOTEST36"
+      },
+      {
+        "awb_no": 715547267,
+        "drs_id": 95832664,
+        "product_type": "FWD",
+        "payment_type": "COD",
+        "ud_time_stamp": "2024-10-11 04:36 AM",
+        "fe_name": "ESPPAutomation ESPPAutomation",
+        "fe_emp_code": "AUTOT131"
+      },
+      {
+        "awb_no": 118542989,
+        "drs_id": 95832670,
+        "product_type": "FWD",
+        "payment_type": "PPD",
+        "ud_time_stamp": "2024-10-11 04:36 AM",
+        "fe_name": "ESPPAutomation ESPPAutomation",
+        "fe_emp_code": "AUTOTEST48"
+      },
+      {
+        "awb_no": 715547268,
+        "drs_id": 95832669,
+        "product_type": "FWD",
+        "payment_type": "COD",
+        "ud_time_stamp": "2024-10-11 04:36 AM",
+        "fe_name": "ESPPAutomation ESPPAutomation",
+        "fe_emp_code": "AUTOT131"
+      }
+
+
+    ]
+  }
+}

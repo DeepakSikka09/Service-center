@@ -1,0 +1,186 @@
+{
+  "status": true,
+  "response": {
+    "description": "Success",
+    "filterData": [
+      {
+        "filterType" : "pending",
+        "value": "FE Name",
+        "subData": [
+          {
+            "title": "ESPPAutomation ESPPAutomation",
+            "id": 1
+          },
+          {
+            "title": "Rahul",
+            "id": 2
+          },
+          {
+            "title": "Vinit",
+            "id": 3
+          },
+          {
+            "title": "Amit",
+            "id": 4
+          },
+          {
+            "title": "Rahul",
+            "id": 5
+          },
+          {
+            "title": "Vinit",
+            "id": 6
+          },
+          {
+            "title": "Amit",
+            "id": 7
+          },
+          {
+            "title": "Amit",
+            "id": 7
+          },
+          {
+            "title": "Rahul",
+            "id": 8
+          },
+          {
+            "title": "Anubhav",
+            "id": 9
+          },
+          {
+            "title": "Vinit",
+            "id": 6
+          },
+          {
+            "title": "Amit",
+            "id": 7
+          },
+          {
+            "title": "Rahul",
+            "id": 8
+          },
+          {
+            "title": "hggh",
+            "id": 9
+          },
+          {
+            "title": "Amit",
+            "id": 7
+          },
+          {
+            "title": "Rahul",
+            "id": 8
+          },
+          {
+            "title": "Anubhav",
+            "id": 9
+          },
+          {
+            "title": "Vinit",
+            "id": 6
+          },
+          {
+            "title": "Amit",
+            "id": 7
+          },
+          {
+            "title": "Rahul",
+            "id": 8
+          },
+          {
+            "title": "hggh",
+            "id": 9
+          }
+        ]
+      },
+      {
+        "filterType" : "pending",
+        "value": "By Time",
+        "subData": [
+          {
+            "title": "4pm",
+            "id": 1234
+          }
+        ]
+      },
+      {
+        "filterType" : "pending",
+        "value": "Reason Codes",
+        "subData": [
+          {
+            "id": "RC1",
+            "title": "Reason 1"
+          }
+        ]
+      },
+      {
+        "filterType" : "pending",
+        "value": "Shipper",
+        "subData": [
+          {
+            "id": "RC1",
+            "title": "Shipper 1"
+          }
+        ]
+      },
+      {
+        "filterType" : "pending",
+        "value": "Product Type",
+        "subData": [
+          {
+            "id": "RC1",
+            "title": "RVP"
+          },
+          {
+            "id": "RC1",
+            "title": "COD"
+          },
+          {
+            "id": "RC1",
+            "title": "RVP"
+          }
+        ]
+      },
+      {
+        "filterType" : "validate",
+        "value": "UD Type",
+        "subData": [
+          {
+            "id": "RC1",
+            "title": "Correct | Fake"
+          }
+        ]
+      },
+      {
+        "filterType" : "validate",
+        "value": "UD Action",
+        "subData": [
+          {
+            "id": "RC1",
+            "title": "Cancel | Re-attempt"
+          }
+        ]
+      },
+      {
+        "filterType" : "validate",
+        "value": "UD Act",
+        "subData": [
+          {
+            "id": "RC1",
+            "title": "Cancel | Re-attempt"
+          }
+        ]
+      },
+      {
+        "filterType" : "validate",
+        "value": "UD ",
+        "subData": [
+          {
+            "id": "RC1",
+            "title": "Cancel | Re-attempt"
+          }
+        ]
+      }
+    ]
+  }
+}

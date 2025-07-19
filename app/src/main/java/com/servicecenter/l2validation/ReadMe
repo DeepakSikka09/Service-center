@@ -1,0 +1,49 @@
+Rule of project
+
+
+1. Do not use !! as null check
+2. Do not give names like tv_, img...
+3. Do not repeat code.code
+
+
+
+
+
+
+
+Kotlin features used :--
+
+1. Stateflow
+2. difference between var , val , cont val
+
+
+
+Retrofit Annotation:--
+
+1. @Query("emp_code") // Get APi in Form data
+2. @QueryMap()  // GET
+3. @Field()   // POst api single type
+4. @Body  //  object
+5. @Part     // Media
+6. @PartMap
+
+1.R8 Shinking-property for reduce the apk size in release mode
+
+
+-- Deepak sikka
+improvement in List Adapter for all module
+common bottom sheet for filter module
+use of Extension functions & scope functions
+Scanner module need to be common for all activity
+
+
+//TODO
+    /*    {
+            RINGING("RINGING_CALLTO", "Call is Ringing", 1),
+            PICKED_UP("ANSWER_CALLTO", "Call Picked by consignee", 2),
+            DISCONNECTED_CALL_FROM("DIS_CALLFROM", "Call Disconnected by you", 3),
+            DISCONNECTED_CALL_TO("DIS_CALLTO", "Call Disconnected by Consignee", 3),
+            ANSWERED("ANSWERED", "Call was Answered by consignee", 4),
+            NORESPONSE("MISSED", "No response from consignee", 5);
+
+        }*/

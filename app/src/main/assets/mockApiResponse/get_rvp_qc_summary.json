@@ -1,0 +1,45 @@
+{
+        "status": true,
+        "response": {
+          "description": "Success",
+          "Pending_shipment": [
+            {
+              "AWB_No": 74700000400,
+              "flyer_code": "74700000400SS",
+              "date": "22/09/23",
+              "status": "Pending",
+              "name": "Avinash  Gaurav",
+              "employee_code": "O345036",
+              "is_fe_image_validation_required": true,
+              "l1_qc_validation_required": true
+            },
+            {
+              "AWB_No": 5783658055,
+              "flyer_code": "5783658055SS",
+              "date": "31/10/23",
+              "status": "Pending",
+              "name": "Avinash  Gaurav",
+              "employee_code": "O345036",
+              "is_fe_image_validation_required": true
+            },
+            {
+              "AWB_No": 5783658056,
+              "flyer_code": "5783658056SS",
+              "date": "31/10/23",
+              "status": "Failed",
+              "name": "Avinash  Gaurav",
+              "employee_code": "O345036",
+              "is_fe_image_validation_required": true
+            },
+            {
+              "AWB_No": 5791551824,
+              "flyer_code": "5791551824SS",
+              "date": "07/11/23",
+              "status": "Failed",
+              "name": "Avinash  Gaurav",
+              "employee_code": "O345036",
+              "is_fe_image_validation_required": false
+            }
+    ]
+  }
+}

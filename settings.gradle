@@ -1,0 +1,21 @@
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+
+        maven {    url "https://artifact.esper.io/artifactory/esper-device-sdk/"}
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven {    url "https://artifact.esper.io/artifactory/esper-device-sdk/"}
+
+
+    }
+}
+rootProject.name = "L2Validation"
+include ':app'

@@ -1,0 +1,41 @@
+{
+  "status": true,
+  "response": {
+    "description": "Success",
+    "fe_images": [
+      "https://podstorage-uat.s3.ap-south-1.amazonaws.com/lastmile/images/2024/Aug/29/747000001784_20087404_open1.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20240829T114115Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=AKIA2QIPR2RQVZ2N3IPC%2F20240829%2Fap-south-1%2Fs3%2Faws4_request&X-Amz-Signature=d9b73f558ff8c8a97de554ed043ca0eb28c96dbcb0016ada90ad9b63b046e5ae",
+      "https://podstorage-uat.s3.ap-south-1.amazonaws.com/lastmile/images/2024/Aug/29/747000001784_20087404_open1_2.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20240829T114115Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3599&X-Amz-Credential=AKIA2QIPR2RQVZ2N3IPC%2F20240829%2Fap-south-1%2Fs3%2Faws4_request&X-Amz-Signature=df81c7b7b1329f30f001ea726bb693d3dc8a327073b2fc5e3738e11d28423108",
+      "https://podstorage-uat.s3.ap-south-1.amazonaws.com/lastmile/images/2024/Aug/29/747000001784_20087404_QC_Check_Image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20240829T114115Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=AKIA2QIPR2RQVZ2N3IPC%2F20240829%2Fap-south-1%2Fs3%2Faws4_request&X-Amz-Signature=989eb90ea9a222c55fda2e96270e8eae3c74378744a05af7b36b7d3bc688422a"
+    ],
+    "product_images": [
+      "https://t3.ftcdn.net/jpg/03/79/17/00/360_F_379170051_7No0Yg8z2uxbyby4Y0WFDNCBZo18tNGr.jpg",
+      " https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0lkg0twA4Mt7HxruwDTc7tF-HGf8LuySnqom_owCCRA&s"
+    ],
+    "flyer_images": [
+      "https://podstorage-uat.s3.ap-south-1.amazonaws.com/lastmile/images/2024/Aug/29/747000001784_20087404_open2.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20240829T114115Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=AKIA2QIPR2RQVZ2N3IPC%2F20240829%2Fap-south-1%2Fs3%2Faws4_request&X-Amz-Signature=3c5cd48db8c9e9e13733d091b2649ff7ed29135b35063ed8084b6144a0cd790d"
+    ],
+    "qc_questions": [
+      {
+        "qc_parameter_id": 5,
+        "qc_value": "2",
+        "qc_name": "QUANTITY of items is: #COLOR#?",
+        "instructions": "Check if the QUANTITY of items consignee returning is the same.",
+        "fe_image": "https://t3.ftcdn.net/jpg/03/79/17/00/360_F_379170051_7No0Yg8z2uxbyby4Y0WFDNCBZo18tNGr.jpg,https://picsum.photos/200/300?grayscale"
+      },
+      {
+        "qc_parameter_id": 1,
+        "qc_value": "https://www.gstatic.com/webp/gallery3/1.sm.png,https://tinyurl.com/y8ykkjql",
+        "qc_name": "Check Image",
+        "instructions": "Is the Image Matching?",
+        "fe_image": "https://picsum.photos/200/300/?blur=2,https://t3.ftcdn.net/jpg/03/79/17/00/360_F_379170051_7No0Yg8z2uxbyby4Y0WFDNCBZo18tNGr.jpg"
+      },
+      {
+        "qc_parameter_id": 2,
+        "qc_value": "https://www.gstatic.com/webp/gallery3/1.sm.png,https://tinyurl.com/y8ykkjql",
+        "qc_name": "Check The product",
+        "instructions": "What is the packet color",
+        "fe_image": "https://picsum.photos/200/300/?blur,https://t3.ftcdn.net/jpg/03/79/17/00/360_F_379170051_7No0Yg8z2uxbyby4Y0WFDNCBZo18tNGr.jpg"
+      }
+    ]
+  }
+}

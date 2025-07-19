@@ -1,0 +1,203 @@
+{
+  "status": true,
+  "response": {
+    "description": "Success",
+    "filters": [
+      {
+        "key_id": "fe_emp_code",
+        "key": "Fe Name",
+        "value": [
+          {
+            "filter_code": "ASATHI24",
+            "filter_value": "ESPPAutomation ESPPAutomation"
+          },
+          {
+            "filter_code": "AUTOTEST36",
+            "filter_value": "ESPPAutomation ESPPAutomation"
+          },
+          {
+            "filter_code": "AUTOTEST48",
+            "filter_value": "ESPPAutomation ESPPAutomation"
+          },
+          {
+            "filter_code": "AUTOTEST90",
+            "filter_value": "ESPPAutomation ESPPAutomation"
+          },
+          {
+            "filter_code": "AUTOTEST56",
+            "filter_value": "ESPPAutomation ESPPAutomation"
+          },
+          {
+            "filter_code": "ASATHI25",
+            "filter_value": "ESPPAutomation ESPPAutomation"
+          },
+          {
+            "filter_code": "AUTOT131",
+            "filter_value": "ESPPAutomation ESPPAutomation"
+          },
+          {
+            "filter_code": "AUTOT132",
+            "filter_value": "ESPPAutomation ESPPAutomation"
+          },
+          {
+            "filter_code": "AUTOT133",
+            "filter_value": "ESPPAutomation ESPPAutomation"
+          },
+          {
+            "filter_code": "AUTOT134",
+            "filter_value": "ESPPAutomation ESPPAutomation"
+          },
+          {
+            "filter_code": "ASATHI24",
+            "filter_value": "ESPPAutomation ESPPAutomation"
+          },
+          {
+            "filter_code": "ASATHI24",
+            "filter_value": "ESPPAutomation ESPPAutomation"
+          },
+          {
+            "filter_code": "ASATHI24",
+            "filter_value": "ESPPAutomation ESPPAutomation"
+          },
+          {
+            "filter_code": "ASATHI24",
+            "filter_value": "ESPPAutomation ESPPAutomation"
+          },
+          {
+            "filter_code": "ASATHI24",
+            "filter_value": "ESPPAutomation ESPPAutomation"
+          },
+          {
+            "filter_code": "ASATHI24",
+            "filter_value": "ESPPAutomation ESPPAutomation"
+          },
+          {
+            "filter_code": "ASATHI24",
+            "filter_value": "ESPPAutomation ESPPAutomation"
+          },
+          {
+            "filter_code": "ASATHI24",
+            "filter_value": "ESPPAutomation ESPPAutomation"
+          },
+          {
+            "filter_code": "ASATHI24",
+            "filter_value": "ESPPAutomation ESPPAutomation"
+          },
+          {
+            "filter_code": "ASATHI24",
+            "filter_value": "ESPPAutomation ESPPAutomation"
+          }
+        ]
+      },
+      {
+        "key_id": "Reason_filter_code",
+        "key": "Reason filter_code",
+        "value": [
+          {
+            "filter_code": "RSN_10_90",
+            "filter_value": "Attempted - Incorrect Secure filter_code"
+          },
+          {
+            "filter_code": "RSN_50_60",
+            "filter_value": "Requested For Future Date "
+          },
+          {
+            "filter_code": "RSN_20_20",
+            "filter_value": "Shipment Not Handed Over"
+          },
+          {
+            "filter_code": "RSN_00_30",
+            "filter_value": "Address locatable"
+          },
+          {
+            "filter_code": "RSN_10_10",
+            "filter_value": "Premise Closed"
+          },
+          {
+            "filter_code": "RSN_200_20",
+            "filter_value": "Delivery Attempted - OTP not available"
+          },
+
+          {
+            "filter_code": "RSN_10_90",
+            "filter_value": "Attempted - Incorrect Secure filter_code"
+          },
+          {
+            "filter_code": "RSN_50_60",
+            "filter_value": "Requested For Future Date "
+          },
+          {
+            "filter_code": "RSN_20_20",
+            "filter_value": "Shipment Not Handed Over"
+          },
+          {
+            "filter_code": "RSN_00_30",
+            "filter_value": "Address locatable"
+          },
+          {
+            "filter_code": "RSN_10_10",
+            "filter_value": "Premise Closed"
+          },
+          {
+            "filter_code": "RSN_200_20",
+            "filter_value": "Delivery Attempted - OTP not available"
+          },
+
+          {
+            "filter_code": "RSN_10_90",
+            "filter_value": "Attempted - Incorrect Secure filter_code"
+          },
+          {
+            "filter_code": "RSN_50_60",
+            "filter_value": "Requested For Future Date "
+          },
+          {
+            "filter_code": "RSN_20_20",
+            "filter_value": "Shipment Not Handed Over"
+          },
+          {
+            "filter_code": "RSN_00_30",
+            "filter_value": "Address locatable"
+          },
+          {
+            "filter_code": "RSN_10_10",
+            "filter_value": "Premise Closed"
+          },
+          {
+            "filter_code": "RSN_200_20",
+            "filter_value": "Delivery Attempted - OTP not available"
+          }, {
+            "filter_code": "RSN_10_90",
+            "filter_value": "Attempted - Incorrect Secure filter_code"
+          },
+          {
+            "filter_code": "RSN_50_60",
+            "filter_value": "Requested For Future Date "
+          },
+          {
+            "filter_code": "RSN_20_20",
+            "filter_value": "Shipment Not Handed Over"
+          },
+          {
+            "filter_code": "RSN_00_30",
+            "filter_value": "Address locatable"
+          },
+          {
+            "filter_code": "RSN_10_10",
+            "filter_value": "Premise Closed"
+          },
+          {
+            "filter_code": "RSN_200_20",
+            "filter_value": "Delivery Attempted - OTP not available"
+          },
+
+          {
+            "filter_code": "RSN_10_90",
+            "filter_value": "Attempted - Incorrect Secure filter_code"
+          }
+        ]
+      }
+    ]
+  }
+}
+

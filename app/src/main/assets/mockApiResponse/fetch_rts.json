@@ -1,0 +1,15 @@
+{
+  "status": true,
+  "response": {
+    "rts_list": [
+      {
+        "awb_number": 2110141642,
+        "order_number": "12-9036US08",
+        "customer_name": "8 / POURE",
+        "customer_code": "73699",
+        "image_count": "2",
+        "rto_lock_applied_timestamp": "2024-09-10T06:44:45.000+00:00"
+      }
+    ]
+  }
+}

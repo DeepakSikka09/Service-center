@@ -1,0 +1,5 @@
+<!-- res/drawable/custom_cursor.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+  <size android:width="2dp"/> <!-- Set the width of the cursor -->
+  <solid android:color="@android:color/black"/> <!-- Set the cursor color to black -->
+</shape>

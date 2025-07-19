@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txt_call"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_bold"
+            android:text="@string/call_to"
+            android:layout_marginStart="@dimen/_10DP"
+            android:textColor="@color/black_1A"
+            android:textSize="@dimen/_21SP"
+            android:layout_marginTop="@dimen/_10DP"
+            app:layout_constraintBottom_toTopOf="@+id/primaryCallCard"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/primaryCallCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:layout_marginTop="@dimen/_10DP"
+            android:layout_marginHorizontal="@dimen/_10DP"
+            android:layout_marginBottom="@dimen/_10DP"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/alternateCallCard"
+            app:layout_constraintTop_toBottomOf="@+id/txt_call">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/primary_const"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/callIcon1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/call"
+                    android:padding="@dimen/_15DP"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/primaryText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_medium"
+                    android:layout_marginTop="@dimen/_10DP"
+                    android:layout_marginStart="@dimen/_15DP"
+                    android:text="@string/primary"
+                    android:textColor="@color/black_1A"
+                    android:textSize="@dimen/_14SP"
+                    app:layout_constraintStart_toEndOf="@id/callIcon1"
+                    app:layout_constraintTop_toBottomOf="@id/primaryContactNumber"
+                    app:layout_constraintTop_toTopOf="@+id/callIcon1" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/primaryContactNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_15DP"
+                    android:fontFamily="@font/roboto_medium"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_16SP"
+                    app:layout_constraintStart_toEndOf="@id/callIcon1"
+                    app:layout_constraintTop_toBottomOf="@id/primaryText" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/alternateCallCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10DP"
+            android:layout_marginHorizontal="@dimen/_10DP"
+            android:backgroundTint="@color/white"
+            android:padding="@dimen/_10DP"
+            android:layout_marginBottom="@dimen/_10DP"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/primaryCallCard">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/alternate_const"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/callIcon2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/call"
+                    android:padding="@dimen/_15DP"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/alternateText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_medium"
+                    android:layout_marginTop="@dimen/_10DP"
+                    android:layout_marginStart="@dimen/_15DP"
+                    android:text="@string/alternate"
+                    android:textColor="@color/black_1A"
+                    android:textSize="@dimen/_14SP"
+                    app:layout_constraintStart_toEndOf="@id/callIcon2"
+                    app:layout_constraintTop_toBottomOf="@id/alternateContactNumber"
+                    app:layout_constraintTop_toTopOf="@+id/callIcon2"  />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/alternateContactNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_15DP"
+                    android:fontFamily="@font/roboto_bold"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_18SP"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/callIcon2"
+                    app:layout_constraintTop_toBottomOf="@id/alternateText"  />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </com.google.android.material.card.MaterialCardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <include
+            android:id="@+id/awb_details"
+            layout="@layout/layout_awb_details"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_8DP"
+            android:background="@color/sky_FF"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/awb_details" />
+
+        <ScrollView
+            android:id="@+id/scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view1"
+            app:layout_constraintBottom_toTopOf="@+id/button_const"
+            >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/scroll_constraint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/_10DP"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/scroll_view">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_20DP"
+                    android:layout_marginTop="@dimen/_3DP"
+                    android:layout_marginEnd="@dimen/_20DP"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/code"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_verfication_code"
+                    style="@style/subheading"
+                    android:layout_marginStart="@dimen/_10DP"
+                    android:text="@string/code_verification"
+                    android:textSize="@dimen/_21SP"
+                    app:layout_constraintStart_toEndOf="@id/iv"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_description"
+                    style="@style/description_text_style"
+                    android:layout_marginTop="@dimen/_15DP"
+                    android:fontFamily="@font/roboto_regular"
+                    android:paddingStart="@dimen/_20DP"
+                    android:paddingEnd="@dimen/_20DP"
+                    android:text="@string/please_ask_the_consignee_to_share_the_re_attempt_code_sent_on_mobile_number_789xxxx999"
+                    android:textSize="@dimen/_18SP"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_verfication_code" />
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constrnt_otp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_30DP"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_description">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ed_otp_1"
+                        style="@style/SingleNumberEditText"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_50DP"
+                        android:layout_marginStart="@dimen/_20DP"
+                        android:layout_marginEnd="@dimen/_20DP"
+                        android:background="@drawable/curved_rectangle_otp"
+                        android:inputType="number"
+                        android:maxLength="1"
+                        tools:text=""
+                        android:maxLines="1"
+                        android:textColor="@color/black"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintWidth_percent="0.13" />
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ed_otp_2"
+                        style="@style/SingleNumberEditText"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_50DP"
+                        android:layout_marginStart="@dimen/_8DP"
+                        android:background="@drawable/curved_rectangle_otp"
+                        android:inputType="number"
+                        android:maxLength="1"
+                        android:enabled="true"
+                        android:maxLines="1"
+                        tools:text=""
+                        android:textColor="@color/black"
+                        app:layout_constraintStart_toEndOf="@id/ed_otp_1"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintWidth_percent="0.13" />
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ed_otp_3"
+                        style="@style/SingleNumberEditText"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_50DP"
+                        android:layout_marginStart="@dimen/_8DP"
+                        android:background="@drawable/curved_rectangle_otp"
+                        android:inputType="number"
+                        android:maxLength="1"
+                        android:enabled="true"
+                        tools:text=""
+                        android:maxLines="1"
+                        android:textColor="@color/black"
+                        app:layout_constraintStart_toEndOf="@id/ed_otp_2"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintWidth_percent="0.13" />
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ed_otp_4"
+                        style="@style/SingleNumberEditText"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_50DP"
+                        android:layout_marginStart="@dimen/_8DP"
+                        android:background="@drawable/curved_rectangle_otp"
+                        android:inputType="number"
+                        android:maxLength="1"
+                        android:maxLines="1"
+                        android:enabled="true"
+                        tools:text=""
+                        android:textColor="@color/black"
+                        app:layout_constraintStart_toEndOf="@id/ed_otp_3"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintWidth_percent="0.13" />
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ed_otp_5"
+                        style="@style/SingleNumberEditText"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_50DP"
+                        android:layout_marginStart="@dimen/_8DP"
+                        android:background="@drawable/curved_rectangle_otp"
+                        android:inputType="number"
+                        android:enabled="true"
+                        android:maxLength="1"
+                        android:maxLines="1"
+                        android:textColor="@color/black"
+                        app:layout_constraintStart_toEndOf="@id/ed_otp_4"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintWidth_percent="0.13" />
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ed_otp_6"
+                        style="@style/SingleNumberEditText"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_50DP"
+                        android:layout_marginStart="@dimen/_8DP"
+                        android:background="@drawable/curved_rectangle_otp"
+                        android:inputType="number"
+                        tools:text=""
+                        android:enabled="true"
+                        android:maxLength="1"
+                        android:maxLines="1"
+                        android:textColor="@color/black"
+                        app:layout_constraintStart_toEndOf="@id/ed_otp_5"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintWidth_percent="0.13" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraint_resend"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_20DP"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/constrnt_otp">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tv_recevie_code"
+                        style="@style/description_text_style"
+                        android:layout_width="wrap_content"
+                        android:layout_marginStart="@dimen/_20DP"
+                        android:layout_marginEnd="@dimen/_20DP"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="@string/didn_t_receive_a_code"
+                        android:textSize="@dimen/_16SP"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tv_resend"
+                        style="@style/description_text_style"
+                        android:layout_width="wrap_content"
+                        android:layout_marginStart="@dimen/_10DP"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text=""
+                        android:textSize="@dimen/_16SP"
+                        app:layout_constraintStart_toEndOf="@id/tv_recevie_code"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <View
+                    android:id="@+id/view2"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_8DP"
+                    android:layout_marginTop="@dimen/_10DP"
+                    android:visibility="gone"
+                    android:background="@color/sky_FF"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/constraint_resend" />
+
+
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/cb_otp"
+                    style="@style/description_text_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10DP"
+                    app:buttonTint="@color/gaycolor"
+                    android:paddingStart="@dimen/_15DP"
+                    android:visibility="gone"
+                    android:textColor="@color/gaycolor"
+                    android:layout_marginStart="@dimen/_20DP"
+                    android:layout_marginEnd="@dimen/_20DP"
+                    android:text="@string/consignee_not_willing_to_shareverification_code"
+                    android:textSize="@dimen/_18SP"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/remark_constraint"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_20DP"
+                    android:layout_marginEnd="@dimen/_20DP"
+                    android:visibility="gone"
+                    android:background="@color/white"
+                    android:paddingTop="@dimen/_12DP"
+                    android:paddingBottom="@dimen/_15DP"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cb_otp">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/remark_heading_tv"
+                        style="@style/subheading"
+                        android:text="@string/remarks"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/remark_tv"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10DP"
+                        android:hint="@string/enter_remarks"
+                        android:textColorHint="@color/editext_border_color"
+                        android:theme="@style/ThemeOverlay.AppTheme.TextInputEditText.Outlined"
+                        app:boxStrokeColor="@color/editext_border_color"
+                        app:hintTextColor="@color/black"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/remark_heading_tv"
+                        app:shapeAppearance="@style/RoundedCorners">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etRemarks"
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:fontFamily="@font/roboto_medium"
+                            android:gravity="start"
+                            android:inputType="text|textMultiLine"
+                            android:maxLength="100"
+                            android:text=""
+                            android:textColor="@color/black_1A"
+                            android:textSize="@dimen/_21SP"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/button_const"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/curved_rectangle_white_two_side"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <View
+            android:id="@+id/btn_view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1DP"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:background="@color/sky_FF"
+            />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonBack"
+            style="@style/custombutton"
+            android:layout_width="@dimen/_0DP"
+            android:layout_marginStart="@dimen/_20DP"
+            android:layout_marginEnd="@dimen/_5DP"
+            android:text="@string/back"
+            android:visibility="visible"
+            android:background="@drawable/yes_dialog_btn"
+            app:backgroundTint="@null"
+            android:textColor="@color/blue_93"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btn_verify_code"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+            <com.google.android.material.button.MaterialButton
+           android:id="@+id/btn_verify_code"
+           style="@style/custombutton"
+           android:layout_width="@dimen/_0DP"
+           android:layout_marginEnd="@dimen/_20DP"
+           android:layout_marginStart="@dimen/_5DP"
+           android:padding="@dimen/_15DP"
+           android:enabled="false"
+           android:text="@string/verify_code"
+           android:visibility="visible"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintBottom_toBottomOf="parent"
+           app:layout_constraintStart_toEndOf="@+id/buttonBack"
+           app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

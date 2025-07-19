@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/item_const"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/awb_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/_10DP"
+            android:paddingStart="@dimen/_20DP"
+            android:paddingEnd="@dimen/_20DP"
+            android:background="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_awb"
+                style="@style/subheading"
+                android:text="@string/awb"
+                android:fontFamily="@font/roboto_medium"
+                android:tint="@color/black_1A"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tv_awb_no"
+                app:layout_constraintBottom_toBottomOf="@id/tv_awb_no" />
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_awb_no"
+                style="@style/subheading"
+                android:layout_marginStart="@dimen/_5DP"
+                app:layout_constraintStart_toEndOf="@id/tv_awb"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+               android:id="@+id/tv_name_heading"
+               style="@style/description_text_style2"
+                android:layout_width="wrap_content"
+                android:text="@string/rider"
+                android:tint="@color/black_1A"
+                android:layout_marginTop="@dimen/_5DP"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_awb" />
+
+            <HorizontalScrollView
+                android:id="@+id/name_scroll"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8DP"
+                android:layout_marginEnd="@dimen/_10DP"
+                app:layout_constraintEnd_toStartOf="@+id/tv_date"
+                app:layout_constraintTop_toTopOf="@id/tv_name_heading"
+                app:layout_constraintStart_toEndOf="@+id/tv_name_heading"
+                app:layout_constraintBottom_toBottomOf="@id/tv_name_heading">
+
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_fe_name"
+                style="@style/description_text_style2"
+                android:textSize="@dimen/_16SP"
+                android:layout_width="0dp"/>
+
+            </HorizontalScrollView>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/shipment_type"
+                style="@style/subheading"
+                android:textAllCaps="true"
+                android:fontFamily="@font/roboto_medium"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:textSize="@dimen/_16SP"
+                app:layout_constraintTop_toTopOf="@id/tv_awb_no"
+                app:layout_constraintBottom_toBottomOf="@id/tv_awb_no" />
+
+            <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_date"
+            style="@style/subheading"
+            android:textAllCaps="true"
+            android:textSize="@dimen/_16SP"
+            android:fontFamily="@font/roboto_medium"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/name_scroll"
+            app:layout_constraintBottom_toBottomOf="@id/name_scroll"/>
+
+            <View
+                android:id="@+id/divider"
+                android:layout_width="@dimen/_0DP"
+                android:layout_height="@dimen/_1DP"
+                android:background="@color/list_divider_color"
+                android:layout_marginTop="@dimen/_10DP"
+                app:layout_constraintTop_toBottomOf="@id/tv_date"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+<!--    </androidx.constraintlayout.widget.ConstraintLayout>-->
+</layout>

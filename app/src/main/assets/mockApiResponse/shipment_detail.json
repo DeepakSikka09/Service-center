@@ -1,0 +1,115 @@
+{
+  "status": true,
+  "response": {
+    "description": "success",
+    "totalShipment": 13,
+    "scannedShipment": 0,
+    "recon_status": 1,
+    "tally_shipment": [
+      {
+        "awbNo": 4321413443,
+        "productType": "RVP",
+        "image_required": true,
+        "isPriorityShipment": true,
+        "isSortCode": true,
+        "sortCode": "fdasfasd"
+      },
+      {
+        "awbNo": 523532444,
+        "productType": "FWD",
+        "image_required": true,
+        "isPriorityShipment": false,
+        "isSortCode": true,
+        "sortCode": "fdasfasd"
+      },
+      {
+        "awbNo": 432122413443,
+        "productType": "RTS",
+        "image_required": true,
+        "isPriorityShipment": true,
+        "isSortCode": false,
+        "sortCode": "fdasfasd"
+      },
+      {
+        "awbNo": 432145513443,
+        "productType": "FWD",
+        "image_required": false,
+        "isPriorityShipment": false,
+        "isSortCode": true,
+        "sortCode": "fdasfasd"
+      },
+      {
+        "awbNo": 949349444,
+        "productType": "FWD",
+        "image_required": false,
+        "isPriorityShipment": true,
+        "isSortCode": false,
+        "sortCode": "fdasfasd"
+      },
+      {
+        "awbNo": 9090494949,
+        "productType": "RTS",
+        "image_required": false,
+        "isPriorityShipment": false,
+        "isSortCode": false,
+        "sortCode": "fdasfasd"
+      },
+      {
+        "awbNo": 4432321413443,
+        "productType": "RVP",
+        "image_required": false,
+        "isPriorityShipment": false,
+        "isSortCode": false,
+        "sortCode": "fdasfasd"
+      },
+      {
+        "awbNo": 443243321413443,
+        "productType": "RVP",
+        "image_required": true,
+        "isPriorityShipment": false,
+        "isSortCode": false,
+        "sortCode": "fdasfasd"
+      },
+      {
+        "awbNo": 123232334444,
+        "productType": "RVP",
+        "image_required": false,
+        "isPriorityShipment": true,
+        "isSortCode": false,
+        "sortCode": "fdasfasd"
+      },
+      {
+        "awbNo": 4432321413443,
+        "productType": "RVP",
+        "image_required": false,
+        "isPriorityShipment": false,
+        "isSortCode": true,
+        "sortCode": "fdasfasd"
+      },
+      {
+        "awbNo": 4432321413443,
+        "productType": "RVP",
+        "image_required": false,
+        "isPriorityShipment": true,
+        "isSortCode": true,
+        "sortCode": "fdasfasd"
+      },
+      {
+        "awbNo": 893924040324,
+        "productType": "RVP",
+        "image_required": true,
+        "isPriorityShipment": false,
+        "isSortCode": true,
+        "sortCode": "fdasfasd"
+      },
+      {
+        "awbNo": 4432321413443,
+        "productType": "RVP",
+        "image_required": true,
+        "isPriorityShipment": true,
+        "isSortCode": false,
+        "sortCode": "fdasfasd"
+      }
+    ]
+  }
+}

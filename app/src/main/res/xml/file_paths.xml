@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <external-path name="my_images" path="Android/data/com.servicecenter.l2validation/files/Pictures" />
+    <external-cache-path name="external_cache_files" path="." />
+    <cache-path name="internal_cache_files" path="." />
+    <external-files-path name="external_files" path="." />
+</paths>

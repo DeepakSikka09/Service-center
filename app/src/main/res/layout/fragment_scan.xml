@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".app.ui.activity.salTally.ScanFragment">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/layout_product_details"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/scanner_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:paddingTop="@dimen/_15DP"
+            android:paddingBottom="@dimen/_15DP"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/iv_scanner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20DP"
+                android:src="@drawable/scanner"
+                android:tint="@color/black_1A"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_scan_shipment"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tv_scan_shipment" />
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_scan_shipment"
+                style="@style/title_text_style"
+                android:layout_marginStart="@dimen/_15DP"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/scan_awb_barcode"
+                app:layout_constraintStart_toEndOf="@id/iv_scanner"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <com.journeyapps.barcodescanner.DecoratedBarcodeView
+            android:id="@+id/ivBarcode"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:background="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/scanner_bar"
+            app:zxing_scanner_layout="@layout/custom_scanner_view">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/iv_flash"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_margin="@dimen/_8DP"
+                android:src="@drawable/flash_off" />
+
+        </com.journeyapps.barcodescanner.DecoratedBarcodeView>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_shipment_list"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_0DP"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivBarcode"
+            app:layout_constraintVertical_bias="1.0"
+            tools:layout_editor_absoluteX="-96dp">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_pending"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8DP"
+                android:background="@drawable/curved_rectangle_white_four_side"
+                android:padding="@dimen/_15DP"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_pending_shipment"
+                    style="@style/subheading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pending_for_sal_tally"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_pending_no"
+                    style="@style/subheading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_1DP"
+                    android:text="0"
+                    app:layout_constraintStart_toEndOf="@id/tv_pending_shipment"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_2DP"
+                android:background="@color/sky_FF"
+                app:layout_constraintTop_toBottomOf="@id/cl_pending" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_10DP"
+                app:layout_constraintBottom_toTopOf="@id/const_info"
+                app:layout_constraintTop_toBottomOf="@id/view">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/responseCl"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_0DP">
+
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/priorityShipmentTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/priority_shipment_bg"
+                        android:drawableStart="@drawable/ic_priority"
+                        android:drawablePadding="@dimen/_15DP"
+                        android:fontFamily="@font/roboto_medium"
+                        android:paddingHorizontal="@dimen/_20DP"
+                        android:paddingVertical="@dimen/_15DP"
+                        android:text="@string/priority_shipment"
+                        android:textColor="@color/purple_d9"
+                        android:textSize="@dimen/_18SP"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toTopOf="@+id/awbTallySuccess"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/awbTallySuccess"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_20DP"
+                        android:visibility="gone"
+                        app:layout_constraintTop_toBottomOf="@+id/priorityShipmentTv"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent">
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/icTick"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/qc_passed"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/awbCl"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10DP"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/icTick">
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/awb"
+                                style="@style/subheading"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/awb"
+                                app:layout_constraintEnd_toStartOf="@id/awbValue"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/awbValue"
+                                style="@style/subheading"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_3DP"
+                                android:text="2036456682"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toEndOf="@id/awb"
+                                app:layout_constraintTop_toTopOf="@id/awb" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/messageTv"
+                            style="@style/subheading"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/sal_tally_done_successfully"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/awbCl" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/rtoLock"
+                        style="@style/subheading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/rto_lock"
+                        android:textColor="@color/red_6e"
+                        android:layout_marginTop="@dimen/_10DP"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/awbTallySuccess"/>
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/ofdLock"
+                        style="@style/subheading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ofd_lock"
+                        android:textColor="@color/red_6e"
+                        android:layout_marginTop="@dimen/_10DP"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/rtoLock"/>
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/dmgLock"
+                        style="@style/subheading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/dmg_lock"
+                        android:textColor="@color/red_6e"
+                        android:visibility="gone"
+                        android:layout_marginTop="@dimen/_10DP"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/ofdLock"/>
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/shortCodeCl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10DP"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/dmgLock">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/code"
+                            style="@style/subheading"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/sort_code"
+                            android:textColor="@color/red_6e"
+                            app:layout_constraintEnd_toStartOf="@id/codeValue"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/codeValue"
+                            style="@style/subheading"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_3DP"
+                            android:text="2036456682"
+                            android:textColor="@color/red_6e"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/code"
+                            app:layout_constraintTop_toTopOf="@id/code" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </ScrollView>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/const_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20DP"
+                android:layout_marginEnd="@dimen/_20DP"
+                android:layout_marginBottom="@dimen/_20DP"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/iv_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/help"
+
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_info_details"
+                    style="@style/subheading"
+                    android:layout_width="@dimen/_0DP"
+                    android:layout_marginStart="@dimen/_15DP"
+                    android:layout_marginBottom="@dimen/_10DP"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="@string/if_awb_barcode_is_not_readable_take_re_print_from_track_me_screen"
+                    android:textSize="@dimen/_14SP"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/iv_info"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

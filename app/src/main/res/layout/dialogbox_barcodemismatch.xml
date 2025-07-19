@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_15DP"
+        android:background="@drawable/curved_rectangle_white_four_side">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/iv_alert_box"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/alert_box"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_margin="@dimen/_20DP" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_flyer_description"
+                style="@style/description_text_style"
+                android:textSize="@dimen/_18SP"
+                android:text="Flyer barcode mismatch.\nDo you want to proceed  \nwith new flyer barcode?"
+                android:layout_marginHorizontal="@dimen/_20DP"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/iv_alert_box" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20DP"
+            android:layout_marginStart="@dimen/_8DP"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cl_main">
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_no"
+                style="@style/custombutton"
+                android:layout_width="130dp"
+                android:layout_height="@dimen/_55DP"
+                android:backgroundTint="@color/gray"
+                android:text="No"
+                app:cornerRadius="@dimen/_10DP"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                 />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_yes"
+                style="@style/custombutton"
+                android:layout_width="130dp"
+                android:layout_height="@dimen/_55DP"
+                android:backgroundTint="@color/blue"
+                android:layout_marginStart="@dimen/_15DP"
+                android:text="Yes"
+                app:cornerRadius="@dimen/_10DP"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/btn_no"
+                />
+
+
+
+
+            <!--<androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_no"
+                android:layout_width="130dp"
+                android:layout_height="@dimen/_55DP"
+                android:background="@drawable/rounded_cornor"
+                android:padding="@dimen/_10DP"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.48">
+
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/no"
+                    android:fontFamily="@font/roboto_medium"
+                    android:textColor="@color/no_color"
+                    android:textSize="@dimen/_21SP"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_yes"
+                android:layout_width="130dp"
+                android:layout_height="@dimen/_55DP"
+                android:layout_marginStart="@dimen/_25DP"
+                android:layout_marginHorizontal="@dimen/_20DP"
+                android:background="@drawable/rounded_cornor"
+                android:padding="@dimen/_10DP"
+                app:layout_constraintStart_toEndOf="@+id/cl_no"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.48">
+
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_yes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/yes"
+                    android:textColor="@color/blue"
+                    android:textSize="@dimen/_21SP"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

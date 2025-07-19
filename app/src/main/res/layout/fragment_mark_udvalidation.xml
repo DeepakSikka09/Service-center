@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".app.ui.activity.udCalling.MarkUDValidationActivity">
+
+
+        <include
+            android:id="@+id/awb_details"
+            layout="@layout/layout_awb_details"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_8DP"
+            android:background="@color/sky_FF"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/awb_details" />
+
+        <ScrollView
+            android:id="@+id/scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/btn_const"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view1">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/scroll_constraint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/scroll_view">
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/consignee_reason_constraint"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:paddingTop="@dimen/_12DP"
+                    android:paddingBottom="@dimen/_15DP"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/consignee_reason_tv"
+                        style="@style/title_text_style"
+                        android:layout_marginStart="@dimen/_20DP"
+                        android:text="@string/mark_ud_validation"
+                        android:textSize="@dimen/_20SP"
+                        android:tint="@color/black_1A"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/radio_constraint"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_20DP"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/consignee_reason_tv">
+
+                        <RadioGroup
+                            android:id="@+id/radio_group"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+
+                            <RadioButton
+                                android:id="@+id/correct_radio"
+                                style="@style/title_text_style2"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:backgroundTint="@color/radio_color"
+                                android:buttonTint="@color/black"
+                                android:fontFamily="@font/roboto_medium"
+                                android:paddingStart="@dimen/_10DP"
+                                android:text="@string/correct"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_18SP" />
+
+                            <!-- android:background="@drawable/curved_rectangle_white_four_side"-->
+
+                            <RadioButton
+                                android:id="@+id/Fake_radio"
+                                style="@style/title_text_style2"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:backgroundTint="@color/radio_color"
+                                android:buttonTint="@color/black"
+                                android:fontFamily="@font/roboto_medium"
+                                android:paddingStart="@dimen/_10DP"
+                                android:text="@string/fake"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_18SP" />
+
+                        </RadioGroup>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <View
+                    android:id="@+id/view2"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_8DP"
+                    android:background="@color/sky_FF"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/consignee_reason_constraint" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/consignee_request_constraint"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:paddingTop="@dimen/_12DP"
+                    android:paddingBottom="@dimen/_15DP"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/view2">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/consignee_request_tv"
+                        style="@style/title_text_style"
+                        android:layout_marginStart="@dimen/_20DP"
+                        android:text="@string/consignee_requested_to"
+                        android:textSize="@dimen/_20SP"
+                        android:tint="@color/black_1A"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/radio_request_constraint"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_20DP"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/consignee_request_tv">
+
+                        <RadioGroup
+                            android:id="@+id/radio_group_requested"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+
+                            <RadioButton
+                                android:id="@+id/re_attempt_radio"
+                                style="@style/title_text_style2"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:backgroundTint="@color/radio_color"
+                                android:buttonTint="@color/black"
+                                android:fontFamily="@font/roboto_medium"
+                                android:paddingStart="@dimen/_10DP"
+                                android:text="@string/re_attempt"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_18SP" />
+
+                            <RadioButton
+                                android:id="@+id/Cancel_radio"
+                                style="@style/title_text_style2"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:backgroundTint="@color/radio_color"
+                                android:buttonTint="@color/black"
+                                android:fontFamily="@font/roboto_medium"
+                                android:paddingStart="@dimen/_10DP"
+                                android:text="@string/cancel"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_18SP" />
+
+                        </RadioGroup>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <View
+                    android:id="@+id/view3"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_8DP"
+                    android:background="@color/sky_FF"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/consignee_request_constraint" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/consignee_schedule_constraint"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:paddingTop="@dimen/_12DP"
+                    android:paddingBottom="@dimen/_15DP"
+                    android:visibility="visible"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/view3">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/consignee_re_attempt_tv"
+                        style="@style/title_text_style"
+                        android:layout_marginStart="@dimen/_20DP"
+                        android:text="@string/schedule_reattempt_shipment"
+                        android:textSize="@dimen/_20SP"
+                        android:tint="@color/black_1A"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/date_constraint"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_20DP"
+                        android:layout_marginVertical="@dimen/_8DP"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/consignee_re_attempt_tv">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/date_recyclerview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/call_disconnected_consignee"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toTopOf="@+id/view4"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/consignee_schedule_constraint">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/iv_callDrop"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_120DP"
+                        android:src="@drawable/calldrop"
+                        app:layout_constraintBottom_toTopOf="@+id/tv_message"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tv_message"
+                        style="@style/title_text_style"
+                        android:layout_width="@dimen/_0DP"
+                        android:layout_marginStart="@dimen/_20DP"
+                        android:layout_marginTop="@dimen/_20DP"
+                        android:layout_marginEnd="@dimen/_20DP"
+                        android:layout_marginBottom="@dimen/_120DP"
+                        android:gravity="center"
+                        android:text="Call disconnected by Consignee "
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_21SP"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/iv_callDrop" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <View
+                    android:id="@+id/view4"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_8DP"
+                    android:background="@color/sky_FF"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/call_disconnected_consignee" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/remark_constraint"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_20DP"
+                    android:layout_marginTop="@dimen/_10DP"
+                    android:layout_marginEnd="@dimen/_20DP"
+                    android:background="@color/white"
+                    android:paddingTop="@dimen/_12DP"
+                    android:paddingBottom="@dimen/_15DP"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/view4">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/remark_heading_tv"
+                        style="@style/subheading"
+                        android:text="@string/remark"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/remark_tv"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10DP"
+                        android:hint="Enter Remarks"
+                        app:hintEnabled="true"
+                        android:textColorHint="@color/editext_border_color"
+                        android:theme="@style/ThemeOverlay.AppTheme.TextInputEditText.Outlined"
+                        app:boxStrokeColor="@color/editext_border_color"
+                        app:hintTextColor="@color/black"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/remark_heading_tv"
+                        app:layout_constraintVertical_bias="0.0"
+                        app:shapeAppearance="@style/RoundedCorners">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etRemarks"
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:fontFamily="@font/roboto_medium"
+                            android:gravity="left"
+                            android:inputType="text|textMultiLine"
+                            android:maxLines="4"
+                            android:text=""
+                            android:textColor="@color/black_1A"
+                            android:textSize="@dimen/_21SP"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/btn_const"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <View
+                android:id="@+id/btn_view"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1DP"
+                android:background="@color/sky_FF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+
+            <!--<androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_submit"
+                style="@style/buttoncommonstyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_20DP"
+                android:layout_marginVertical="@dimen/_10DP"
+                android:background="@drawable/custom_disable_button_10dp"
+                android:enabled="false"
+                android:text="@string/submit"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_view"
+                app:layout_constraintWidth_percent="0.45" />-->
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_submit"
+                style="@style/custombutton"
+                android:background="@drawable/custom_disable_button_10dp"
+                android:layout_marginHorizontal="@dimen/_20DP"
+                android:layout_marginVertical="@dimen/_10DP"
+                android:padding="@dimen/_10DP"
+                android:text="@string/submit"
+                android:enabled="false"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_view" />
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

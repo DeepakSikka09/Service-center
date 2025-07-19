@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".app.ui.activity.salTally.MarkExceptionFragment">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/layout_product_details"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/awb"
+            style="@style/heading"
+            android:layout_width="@dimen/_0DP"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20DP"
+            android:text="@string/awb_2036456682"
+            app:layout_constraintBottom_toBottomOf="@id/orderType"
+            app:layout_constraintEnd_toStartOf="@id/orderType"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/orderType" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/orderType"
+            style="@style/subheading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_20DP"
+            android:background="@drawable/order_type_bg"
+            android:paddingHorizontal="@dimen/_10DP"
+            android:paddingVertical="@dimen/_4DP"
+            android:text="Fwd"
+            android:layout_marginTop="@dimen/_20DP"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/awb"
+            app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_5DP"
+            android:layout_marginTop="@dimen/_15DP"
+            android:background="@color/sky_FF"
+            app:layout_constraintTop_toBottomOf="@id/orderType" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_0DP"
+            app:layout_constraintBottom_toTopOf="@id/viewBottom"
+            app:layout_constraintTop_toBottomOf="@id/view">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/_10DP">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/alertCl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_20DP"
+                    android:layout_marginVertical="@dimen/_15DP"
+                    android:background="@drawable/alert_bg"
+                    android:paddingHorizontal="@dimen/_20DP"
+                    android:paddingVertical="@dimen/_15DP"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_tally_alert"
+                        app:layout_constraintBottom_toBottomOf="@id/alertTv"
+                        app:layout_constraintEnd_toStartOf="@id/alertTv"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/alertTv" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/alertTv"
+                        style="@style/subheading"
+                        android:layout_width="@dimen/_0DP"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_15DP"
+                        android:text="@string/tally_mark_exception_alert"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/icon"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <View
+                    android:id="@+id/view2"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_5DP"
+                    android:layout_marginTop="@dimen/_15DP"
+                    android:background="@color/sky_FF"
+                    app:layout_constraintTop_toBottomOf="@id/alertCl" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/reasonTv"
+                    style="@style/subheading"
+                    android:textSize="@dimen/_21SP"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15DP"
+                    android:text="@string/select_reason"
+                    app:layout_constraintStart_toStartOf="@id/alertCl"
+                    app:layout_constraintTop_toBottomOf="@id/view2" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_8DP"
+                    android:orientation="vertical"
+                    app:layout_constraintStart_toStartOf="@id/alertCl"
+                    app:layout_constraintTop_toBottomOf="@id/reasonTv">
+
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/missingRadioBtn"
+                        style="@style/subheading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_15DP"
+                        android:background="@drawable/radio_bg"
+                        android:button="@null"
+                        android:checked="true"
+                        android:drawableStart="@drawable/custom_radio_btn"
+                        android:drawablePadding="@dimen/_10DP"
+                        android:paddingStart="@dimen/_10DP"
+                        android:paddingEnd="@dimen/_10DP"
+                        android:text="@string/content_missing"
+                        android:textColor="@color/black_1A"
+                        android:textSize="@dimen/_18SP" />
+
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/damageRadioBtn"
+                        style="@style/subheading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_15DP"
+                        android:background="@drawable/radio_bg"
+                        android:button="@null"
+                        android:drawableStart="@drawable/custom_radio_btn"
+                        android:drawablePadding="@dimen/_10DP"
+                        android:paddingStart="@dimen/_10DP"
+                        android:paddingEnd="@dimen/_10DP"
+                        android:text="@string/damage"
+                        android:textColor="@color/black_1A"
+                        android:textSize="@dimen/_18SP" />
+                </RadioGroup>
+
+                <View
+                    android:id="@+id/view3"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_5DP"
+                    android:layout_marginTop="@dimen/_25DP"
+                    android:background="@color/sky_FF"
+                    app:layout_constraintTop_toBottomOf="@id/radioGroup" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/imageCl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/view3">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/captureShipmentCl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_20DP"
+                        android:layout_marginVertical="@dimen/_15DP"
+                        android:background="@drawable/camera_bg"
+                        android:paddingHorizontal="@dimen/_20DP"
+                        android:paddingVertical="@dimen/_15DP"
+                        android:visibility="gone"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/captureTv"
+                            style="@style/subheading"
+                            android:layout_width="@dimen/_0DP"
+                            android:layout_height="wrap_content"
+                            android:text="Capture shipment image"
+                            android:textAlignment="center"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@id/icCam"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/icCam"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/cam"
+                            android:layout_marginStart="@dimen/_10DP"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/captureTv"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/capturedImageCl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_20DP"
+                        android:layout_marginVertical="@dimen/_15DP"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:visibility="visible">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/CapturedImageTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            android:text="@string/captured_images"
+                            style="@style/subheading" />
+
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/capturedShipmentCl"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingHorizontal="@dimen/_15DP"
+                            android:paddingVertical="@dimen/_15DP"
+                            android:background="@drawable/captured_image_bg"
+                            android:layout_marginTop="@dimen/_15DP"
+                            android:elevation="@dimen/_20DP"
+                            app:layout_constraintTop_toBottomOf="@id/CapturedImageTv">
+
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:id="@+id/capturedImage"
+                                android:layout_width="@dimen/_75dp"
+                                android:layout_height="@dimen/_50DP"
+                                android:src="@drawable/front_capture_placeholder"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/capturedTv"
+                                style="@style/subheading"
+                                android:layout_width="@dimen/_0DP"
+                                android:layout_height="wrap_content"
+                                android:text="@string/captured_image"
+                                android:textAlignment="viewStart"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toStartOf="@id/icDelete"
+                                app:layout_constraintStart_toEndOf="@id/capturedImage"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:id="@+id/icDelete"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_imag_clear"
+                                android:layout_marginStart="@dimen/_10DP"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toEndOf="@id/capturedTv"
+                                app:layout_constraintTop_toTopOf="parent" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <View
+                    android:id="@+id/view4"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_5DP"
+                    android:layout_marginTop="@dimen/_15DP"
+                    android:background="@color/sky_FF"
+                    app:layout_constraintTop_toBottomOf="@id/imageCl" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/remarksTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="@id/alertCl"
+                    app:layout_constraintTop_toBottomOf="@id/view4"
+                    android:layout_marginTop="@dimen/_15DP"
+                    style="@style/subheading"
+                    android:text="@string/remarks" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/remarksEt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lines="3"
+                    android:layout_marginTop="@dimen/_10DP"
+                    app:layout_constraintTop_toBottomOf="@id/remarksTv"
+                    android:layout_marginHorizontal="@dimen/_20DP"
+                    android:isScrollContainer="true"
+                    android:padding="@dimen/_10DP"
+                    android:singleLine="false"
+                    android:inputType="textMultiLine"
+                    style="@style/subheading"
+                    android:gravity="start"
+                    android:scrollbarSize="@dimen/_5DP"
+                    android:scrollbars="vertical"
+                    android:scrollIndicators="end"
+                    android:overScrollMode="always"
+                    android:scrollbarStyle="insideInset"
+                    android:nestedScrollingEnabled="false"
+                    android:background="@drawable/remark_bg"
+                    android:hint="@string/enter_remarks"
+                    android:textColorHint="@color/grey_96" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+
+        <View
+            android:id="@+id/viewBottom"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/light_grey_ec"
+            android:layout_marginBottom="@dimen/_20DP"
+            app:layout_constraintBottom_toTopOf="@id/submitBtn"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/submitBtn"
+            style="@style/subheading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_20DP"
+            android:layout_marginBottom="@dimen/_20DP"
+            android:includeFontPadding="false"
+            android:paddingVertical="@dimen/_10DP"
+            android:text="@string/submit"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_21SP"
+            app:backgroundTint="@null"
+            android:enabled="false"
+            android:background="@drawable/submit_btn_bg"
+            app:layout_constraintBottom_toBottomOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

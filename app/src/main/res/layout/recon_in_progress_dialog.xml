@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_20DP"
+            android:padding="@dimen/_20DP"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@drawable/captured_image_bg">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/alertTv"
+                style="@style/subheading"
+                android:layout_width="@dimen/_0DP"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/_20DP"
+                android:text="@string/shipment_reconciliation_is_in_progress"
+                android:drawableStart="@drawable/ic_tally_alert"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/okBtn"
+                android:layout_width="@dimen/_0DP"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5DP"
+                android:background="@drawable/custom_button_10dp"
+                app:backgroundTint="@null"
+                android:text="@string/ok"
+                android:textColor="@color/white"
+                style="@style/subheading"
+                android:layout_marginTop="@dimen/_20DP"
+                app:layout_constraintTop_toBottomOf="@id/alertTv"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

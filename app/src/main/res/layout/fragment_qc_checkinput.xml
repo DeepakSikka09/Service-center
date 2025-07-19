@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="@dimen/_16DP">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_image_match"
+            style="@style/subheading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/does_the_image_match"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/et_code"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15DP"
+            android:hint="Enter your code"
+            android:textColorHint="@color/black"
+            android:theme="@style/ThemeOverlay.AppTheme.TextInputEditText.Outlined"
+            app:boxStrokeColor="@color/black"
+            app:hintTextColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_image_match"
+            app:shapeAppearance="@style/RoundedCorners">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ed_emei"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_medium"
+                android:inputType="number"
+                android:maxLines="1"
+                android:textColor="@color/black_1A"
+                android:textSize="@dimen/_21SP" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_18DP"
+            android:background="@color/blue_FF"
+            android:padding="@dimen/_14DP"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_code">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_description_title"
+                style="@style/subheading"
+                android:alpha="0.5"
+                android:text="@string/description"
+                android:textSize="@dimen/_21SP"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_imei"
+                style="@style/description_text_style2"
+                android:layout_width="wrap_content"
+                android:fontFamily="@font/roboto_regular"
+                android:layout_marginTop="@dimen/_8DP"
+                android:text="IMEI number:"
+                android:textSize="@dimen/_16SP"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_description_title" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_imei_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8DP"
+                android:layout_marginTop="@dimen/_8DP"
+                android:fontFamily="@font/roboto_regular"
+                android:text="34u543053"
+                android:textColor="@color/black_1A"
+                android:textSize="@dimen/_16SP"
+                app:layout_constraintStart_toEndOf="@id/tv_imei"
+                app:layout_constraintTop_toBottomOf="@+id/tv_description_title" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/button_const"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/curved_rectangle_white_two_side"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraint_description">
+
+            <View
+                android:id="@+id/btn_view"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1DP"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:background="@color/sky_FF"
+                />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/submit"
+                style="@style/custombutton"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_margin="@dimen/_10DP"
+                android:text="@string/submit"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

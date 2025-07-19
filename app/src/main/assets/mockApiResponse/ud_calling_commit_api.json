@@ -1,0 +1,7 @@
+{
+  "status": true,
+  "response": {
+    "status_code": "BAD_REQUEST",
+    "description": "Success to call NDR api"
+  }
+}

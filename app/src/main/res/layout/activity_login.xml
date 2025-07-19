@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:fitsSystemWindows="true">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraint_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_20DP"
+                android:layout_marginTop="@dimen/_12DP"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/ecom_logo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="28dp"
+                    android:src="@drawable/company_logo"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textField"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_100DP"
+                    android:hint="@string/employee_code"
+                    android:textColorHint="@color/editext_border_color"
+                    android:theme="@style/ThemeOverlay.AppTheme.TextInputEditText.Outlined"
+                    app:boxStrokeColor="@color/editext_border_color"
+                    app:hintTextColor="@color/black"
+
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ecom_logo"
+                    app:shapeAppearance="@style/RoundedCorners">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etEmployeeCode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_medium"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:textColor="@color/black_1A"
+                        android:textSize="@dimen/_15SP" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textField2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textField"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_marginTop="@dimen/_27DP"
+                    android:hint="@string/password"
+                    app:passwordToggleEnabled="true"
+                    android:textColorHint="@color/editext_border_color"
+                    android:theme="@style/ThemeOverlay.AppTheme.TextInputEditText.Outlined"
+                    app:boxStrokeColor="@color/editext_border_color"
+                    app:hintTextColor="@color/black"
+                    app:passwordToggleDrawable="@drawable/password_toggle"
+                    app:passwordToggleTint="@color/black"
+                    app:shapeAppearance="@style/RoundedCorners">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_medium"
+                        android:inputType="textPassword"
+                        android:maxLines="1"
+                        android:textColor="@color/black_1A"
+                        android:textSize="@dimen/_15SP" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_forget_pwd"
+                    style="@style/description_text_style2"
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="@dimen/_30DP"
+                    android:text="@string/forget_passwords"
+                    android:textColor="@color/blue_18"
+                    android:textSize="@dimen/_14SP"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/textField2" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_get_code"
+                    style="@style/custombutton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_30DP"
+                    android:backgroundTint="@color/gray"
+                    android:padding="@dimen/_15DP"
+                    android:text="@string/get_code"
+                    app:cornerRadius="@dimen/_10DP"
+                    android:enabled="false"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_forget_pwd" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_version_name"
+                style="@style/description_text_style2"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="@dimen/_30DP"
+                android:textColor="@color/gaycolor"
+                android:textSize="@dimen/_16SP"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/constraint_main" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+</layout>

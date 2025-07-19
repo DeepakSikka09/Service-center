@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/sal_tally_graph"
+    app:startDestination="@id/scanFragment">
+
+
+    <fragment
+        android:id="@+id/scanFragment"
+        tools:layout="@layout/fragment_scan"
+        android:name="com.servicecenter.l2validation.app.ui.activity.salTally.ScanFragment"/>
+    <fragment
+        android:id="@+id/markCompleteFragment"
+        tools:layout="@layout/fragment_mark_complete"
+        android:name="com.servicecenter.l2validation.app.ui.activity.salTally.MarkCompleteFragment"/>
+    <fragment
+        android:id="@+id/exceptionFragment"
+        tools:layout="@layout/fragment_mark_exception"
+        android:name="com.servicecenter.l2validation.app.ui.activity.salTally.MarkExceptionFragment"/>
+    <fragment
+        android:id="@+id/cameraFragment"
+        tools:layout="@layout/fragment_camera_x"
+        android:name="com.servicecenter.l2validation.utils.cameraX.CameraXFragment"/>
+    <fragment
+        android:id="@+id/captureImageFragment"
+        tools:layout="@layout/fragment_capture_image"
+        android:name="com.servicecenter.l2validation.app.ui.activity.salTally.CaptureImageFragment"/>
+    <fragment
+        android:id="@+id/messageFragment"
+        tools:layout="@layout/fragment_message"
+        android:name="com.servicecenter.l2validation.app.ui.activity.salTally.MessageFragment"/>
+    <fragment
+        android:id="@+id/searchScanFragment"
+        tools:layout="@layout/fragment_search_scan"
+        android:name="com.servicecenter.l2validation.app.ui.activity.salTally.SearchScanFragment"/>
+
+
+</navigation>

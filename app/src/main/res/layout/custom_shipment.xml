@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/custom_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/curved_rectangle_white_two_side"
+        android:padding="@dimen/_25DP"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/iv_back_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10DP"
+            android:layout_marginStart="@dimen/_22DP"
+            android:tint="@color/black_1A"
+            android:src="@drawable/pending_box"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_pending_no"
+            app:layout_constraintBottom_toBottomOf="@id/tv_pending_no"
+            />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_pending_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/subheading"
+            android:layout_marginStart="@dimen/_15DP"
+            android:text="18"
+            app:layout_constraintStart_toEndOf="@id/iv_back_arrow"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_pending_shipment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/subheading"
+            android:layout_marginStart="@dimen/_15DP"
+            android:text="Pending shipments"
+            app:layout_constraintStart_toEndOf="@id/tv_pending_no"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

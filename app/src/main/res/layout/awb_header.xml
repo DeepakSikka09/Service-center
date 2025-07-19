@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primary_color"
+        android:padding="@dimen/_20DP">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/awb_text"
+            style="@style/description_text_style"
+            android:alpha="0.80"
+            android:text="@string/awb"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/awb_value"
+            style="@style/description_text_style"
+            android:alpha="0.80"
+            android:text=""
+            android:textColor="@color/white"
+            app:layout_constraintStart_toEndOf="@id/awb_text"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/order_id_text"
+            style="@style/description_text_style"
+            android:layout_marginEnd="@dimen/_80DP"
+            android:alpha="0.80"
+            android:text="@string/order_id"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14SP"
+            app:layout_constraintStart_toStartOf="@+id/vertical_guideline"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/vertical_guideline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent=".5" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/order_id_value"
+            style="@style/description_text_style"
+            android:alpha="0.80"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14SP"
+            app:layout_constraintStart_toEndOf="@id/order_id_text"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_20DP"
+            android:padding="@dimen/_20DP"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@drawable/captured_image_bg">
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/alertTv"
+                style="@style/subheading"
+                android:layout_width="@dimen/_0DP"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/_20DP"
+                android:text="@string/do_you_want_to_cancel_the_current_sal_tally_process"
+                android:drawableStart="@drawable/ic_tally_alert"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/yesBtn"
+                android:layout_width="@dimen/_0DP"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_5DP"
+                android:layout_marginTop="@dimen/_20DP"
+                android:background="@drawable/yes_dialog_btn"
+                app:backgroundTint="@null"
+                android:text="@string/yes"
+                android:textColor="@color/blue_93"
+                style="@style/subheading"
+                app:layout_constraintTop_toBottomOf="@id/alertTv"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/noBtn"/>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/noBtn"
+                android:layout_width="@dimen/_0DP"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5DP"
+                android:background="@drawable/custom_button_10dp"
+                app:backgroundTint="@null"
+                android:text="@string/no"
+                android:textColor="@color/white"
+                style="@style/subheading"
+                app:layout_constraintTop_toTopOf="@id/yesBtn"
+                app:layout_constraintStart_toEndOf="@id/yesBtn"
+                app:layout_constraintEnd_toEndOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

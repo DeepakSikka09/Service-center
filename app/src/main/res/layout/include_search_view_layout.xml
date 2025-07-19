@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/search_const"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+
+      <androidx.constraintlayout.widget.ConstraintLayout
+          android:id="@+id/search_constraint"
+          android:layout_width="@dimen/_0DP"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="@dimen/_20DP"
+          android:layout_marginTop="@dimen/_10DP"
+          android:layout_marginEnd="@dimen/_6DP"
+          android:background="@drawable/curved_rectangle_searchbar"
+          app:layout_constraintEnd_toStartOf="@+id/filter"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent">
+
+          <androidx.appcompat.widget.SearchView
+              android:id="@+id/search_view"
+              android:layout_width="@dimen/_0DP"
+              android:layout_height="wrap_content"
+              android:iconifiedByDefault="false"
+              android:paddingEnd="@dimen/_5DP"
+              android:textSize="@dimen/_18DP"
+              android:theme="@style/CustomSearchViewStyle"
+              app:layout_constraintEnd_toStartOf="@+id/barcode_image"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toTopOf="parent"
+              app:queryBackground="@android:color/transparent" />
+
+
+          <com.google.android.material.imageview.ShapeableImageView
+              android:id="@+id/barcode_image"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginEnd="@dimen/_8DP"
+              android:src="@drawable/barcode_scanner"
+              app:layout_constraintBottom_toBottomOf="parent"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintTop_toTopOf="parent" />
+
+
+      </androidx.constraintlayout.widget.ConstraintLayout>
+
+      <com.google.android.material.imageview.ShapeableImageView
+          android:id="@+id/filter"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginEnd="@dimen/_16DP"
+          android:padding="@dimen/_5DP"
+          android:src="@drawable/filter"
+          app:layout_constraintBottom_toBottomOf="@id/search_constraint"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintTop_toTopOf="@+id/search_constraint" />
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "806102889306",
+    "project_id": "service-center-l2-validation",
+    "storage_bucket": "service-center-l2-validation.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:806102889306:android:b98fa615e9694ebd97b963",
+        "android_client_info": {
+          "package_name": "com.servicecenter.l2validation"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyABA-CG2lULIm4AmGj4bA3issOzHuCYtDk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

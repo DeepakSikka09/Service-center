@@ -1,0 +1,101 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/awb_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/_10DP"
+            android:paddingStart="@dimen/_20DP"
+            android:paddingEnd="@dimen/_20DP"
+            android:background="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_awb"
+                style="@style/subheading"
+                android:text="@string/awb"
+                android:tint="@color/black_1A"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tv_awb_no"
+                app:layout_constraintBottom_toBottomOf="@id/tv_awb_no" />
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_awb_no"
+                style="@style/subheading"
+                android:layout_marginStart="@dimen/_5DP"
+                android:text=""
+                app:layout_constraintStart_toEndOf="@id/tv_awb"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <HorizontalScrollView
+                android:id="@+id/name_scroll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/tv_awb"
+                app:layout_constraintBottom_toTopOf="@+id/divider" >
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tv_name_heading"
+                        style="@style/subheading"
+                        android:text="@string/emp_Name"
+                        android:textColor="@color/gaycolor"
+                        android:textSize="@dimen/_16SP"
+                        android:layout_marginTop="@dimen/_5DP"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/tv_emp_id"
+                        app:layout_constraintStart_toStartOf="parent"
+                        />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tv_emp_id"
+                        style="@style/subheading"
+                        android:text=""
+                        android:textColor="@color/gaycolor"
+                        android:textSize="@dimen/_16SP"
+                        android:layout_marginStart="@dimen/_5DP"
+                        app:layout_constraintTop_toTopOf="@id/tv_name_heading"
+                        app:layout_constraintStart_toEndOf="@id/tv_name_heading"
+                        app:layout_constraintBottom_toBottomOf="@id/tv_name_heading" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </HorizontalScrollView>
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_date"
+                style="@style/title_text_style"
+                android:text=""
+                android:textSize="@dimen/_16SP"
+                android:layout_marginEnd="@dimen/_20DP"
+                android:tint="@color/black_1A"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tv_awb_no"
+                app:layout_constraintBottom_toBottomOf="@id/tv_awb_no" />
+
+            <View
+                android:id="@+id/divider"
+                android:layout_width="@dimen/_0DP"
+                android:layout_height="@dimen/_1DP"
+                android:background="@color/gaycolor"
+                android:layout_marginTop="@dimen/_10DP"
+                app:layout_constraintTop_toBottomOf="@id/name_scroll"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

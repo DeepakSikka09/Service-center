@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_image_side"
+            style="@style/title_text_style"
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:padding="@dimen/_10DP"
+            android:visibility="visible"
+            android:text="@string/front_image"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constAwb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@color/white"
+            app:layout_constraintTop_toBottomOf="@+id/tv_image_side">
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_awb_no"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ABW:487837787"
+                android:textColor="@color/black_1A"
+                android:fontFamily="@font/roboto_bold"
+                android:textSize="@dimen/_21SP"
+                android:padding="@dimen/_15DP"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_8DP"
+                app:layout_constraintTop_toBottomOf="@+id/tv_awb_no"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:background="@color/blue_FF"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.camera.view.PreviewView
+            android:id="@+id/previewView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constAwb"  />
+
+        <View
+            android:id="@+id/camera_Controls"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/btnTakePicture" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/btnTakePicture"
+            android:layout_width="@dimen/_80DP"
+            android:layout_height="@dimen/_80DP"
+            android:padding="@dimen/_5DP"
+            android:background="@android:color/transparent"
+            android:src="@drawable/cam"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="ContentDescription" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

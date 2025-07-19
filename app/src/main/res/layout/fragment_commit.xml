@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".app.ui.activity.QC_PassedActivity">
+
+        <include
+            android:id="@+id/product_details"
+            layout="@layout/layout_product_details"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint_child_container"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@drawable/curved_rectangle_white_two_side"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/constraint_info"
+            app:layout_constraintTop_toBottomOf="@+id/product_details"
+            >
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/awb_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingTop="@dimen/_15DP"
+                android:paddingBottom="@dimen/_15DP"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_awb"
+                    style="@style/title_text_style"
+                    android:layout_marginStart="@dimen/_20DP"
+                    android:text="AWB : "
+                    android:tint="@color/black_1A"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/tv_awb_no" />
+
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_awb_no"
+                    style="@style/title_text_style"
+                    android:text=""
+                    app:layout_constraintStart_toEndOf="@id/tv_awb"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:id="@+id/view1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_8DP"
+                app:layout_constraintTop_toBottomOf="@+id/awb_bar"
+                app:layout_constraintStart_toStartOf="parent"
+                android:background="@color/sky_FF"
+                />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_qc_passed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:src="@drawable/qc_passed"
+                android:layout_marginHorizontal="@dimen/_20DP"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginBottom="@dimen/_50DP"
+                app:layout_constraintStart_toStartOf="parent"
+                />
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_cross"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:src="@drawable/iv_cross_red"
+                android:layout_marginHorizontal="@dimen/_20DP"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginBottom="@dimen/_50DP"
+                app:layout_constraintStart_toStartOf="parent"
+                />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_message"
+                style="@style/description_text_style"
+                android:layout_width="@dimen/_0DP"
+                android:gravity="center"
+                android:text="@string/l2_validation_success"
+                android:textSize="@dimen/_21SP"
+                android:padding="@dimen/_5DP"
+                android:textColor="@color/black"
+                android:layout_margin="@dimen/_20DP"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/iv_qc_passed"/>
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="@dimen/_10DP"
+            app:layout_constraintBottom_toTopOf="@id/button_const">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/const_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20DP"
+                android:layout_marginEnd="@dimen/_20DP"
+                android:layout_marginBottom="@dimen/_20DP"
+                android:visibility="gone"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/iv_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/help"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_info_details"
+                    style="@style/subheading"
+                    android:layout_width="@dimen/_0DP"
+                    android:textSize="@dimen/_14SP"
+                    android:fontFamily="@font/roboto_regular"
+                    android:layout_marginStart="@dimen/_15DP"
+                    android:text="@string/raise_an_slp_ticket"
+                    app:layout_constraintStart_toEndOf="@id/iv_info"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/rvp_label_cb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="RVP Label not readable"
+                android:layout_marginStart="@dimen/_20DP"
+                android:fontFamily="@font/roboto_regular"
+                android:layout_marginBottom="@dimen/_13DP"
+                android:layout_marginTop="@dimen/_20DP"
+                android:visibility="gone"
+                android:paddingLeft="@dimen/_15DP"
+                android:textColor="@color/gaycolor"
+                android:textSize="@dimen/_18SP"
+                app:layout_constraintTop_toBottomOf="@+id/const_info"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/btn_const"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:background="@drawable/curved_rectangle_white_two_side"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="@dimen/_10DP"
+                app:layout_constraintTop_toBottomOf="@+id/rvp_label_cb"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/scan_next_shipment_btn"
+                    style="@style/custombutton"
+                    android:layout_margin="@dimen/_10DP"
+                    android:enabled="false"
+                    android:text="@string/scan_next_shipment"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/button_const"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/curved_rectangle_white_two_side"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_trackStatus"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="@dimen/_15DP"
+                android:layout_marginEnd="@dimen/_15DP"
+                android:layout_marginBottom="@dimen/_10DP"
+                android:drawableLeft="@drawable/help"
+                android:drawablePadding="@dimen/_20DP"
+                android:visibility="gone"
+                android:text="@string/check_the_status_of_awb_from_the_track_me_screen"
+                android:textColor="@color/black_1A"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toTopOf="@id/btn_view"
+                />
+
+            <View
+                android:id="@+id/btn_view"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1DP"
+                android:layout_marginBottom="@dimen/_10DP"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/qc_passed_btn"
+                android:background="@color/sky_FF"
+                />
+
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/qc_passed_btn"
+                style="@style/buttoncommonstyle"
+                android:layout_margin="@dimen/_10DP"
+                android:background="@drawable/custom_button_10dp"
+                android:text="@string/go_to_pending_list"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".app.ui.activity.salTally.MarkCompleteFragment">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/layout_product_details"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clMarkCounter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_20DP"
+            android:layout_marginVertical="@dimen/_15DP"
+            android:background="@color/sky_FF"
+            android:paddingHorizontal="@dimen/_10DP"
+            android:paddingVertical="@dimen/_20DP"
+            app:layout_constraintBottom_toTopOf="@id/view"
+            app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/completeTitle"
+                style="@style/subheading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/total_shipments"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/completeValue"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/completeValue"
+                style="@style/subheading"
+                android:layout_width="@dimen/_0DP"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_3DP"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/completeTitle"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_5DP"
+            android:layout_marginTop="@dimen/_15DP"
+            android:background="@color/sky_FF"
+            app:layout_constraintTop_toBottomOf="@id/clMarkCounter" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/searchCl"
+            android:layout_width="@dimen/_0DP"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20DP"
+            android:layout_marginTop="@dimen/_10DP"
+            android:layout_marginEnd="@dimen/_10DP"
+            android:background="@drawable/curved_rectangle_searchbar"
+            app:layout_constraintEnd_toStartOf="@id/filterIv"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view">
+
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/search_view"
+                android:layout_width="@dimen/_0DP"
+                android:layout_height="wrap_content"
+                android:iconifiedByDefault="false"
+                android:textSize="@dimen/_18SP"
+                android:theme="@style/CustomSearchViewStyle"
+                app:layout_constraintEnd_toStartOf="@+id/barcodeImage"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:queryBackground="@android:color/transparent" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/barcodeImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_8DP"
+                android:src="@drawable/round_scanner"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/filterIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_15DP"
+            android:src="@drawable/filter"
+            app:layout_constraintBottom_toBottomOf="@id/searchCl"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/searchCl"
+            app:layout_constraintTop_toTopOf="@id/searchCl" />
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_5DP"
+            android:layout_marginTop="@dimen/_15DP"
+            android:background="@color/sky_FF"
+            app:layout_constraintTop_toBottomOf="@id/searchCl" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/selectAllCl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10DP"
+            android:layout_marginStart="@dimen/_20DP"
+            android:layout_marginEnd="@dimen/_20DP"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/view2">
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/selectAllCheck"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:buttonIcon="@drawable/custom_checkbox"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/selectAllTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/select_all"
+                android:layout_marginStart="@dimen/_10DP"
+                app:layout_constraintStart_toEndOf="@id/selectAllCheck"
+                app:layout_constraintTop_toTopOf="@id/selectAllCheck"
+                app:layout_constraintBottom_toBottomOf="@id/selectAllCheck"
+                style="@style/description_text_style2"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/listRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_0DP"
+            android:layout_marginTop="@dimen/_10DP"
+            android:layout_marginBottom="@dimen/_20DP"
+            app:layout_constraintBottom_toTopOf="@id/viewBottom"
+            app:layout_constraintTop_toBottomOf="@id/selectAllCl"
+            tools:itemCount="50"
+            tools:listitem="@layout/tally_pending_item" />
+
+        <View
+            android:id="@+id/viewBottom"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="@dimen/_20DP"
+            android:background="@color/light_grey_ec"
+            app:layout_constraintBottom_toTopOf="@id/scanBtn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/scanBtn"
+            style="@style/subheading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_20DP"
+            android:layout_marginBottom="@dimen/_20DP"
+            android:background="@drawable/submit_btn_bg"
+            android:paddingVertical="@dimen/_10DP"
+            android:text="@string/tally_scan_shipment"
+            android:textColor="@color/white"
+            app:backgroundTint="@null"
+            app:layout_constraintBottom_toBottomOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="responseData"
+            type="com.servicecenter.l2validation.app.ui.viewmodel.ProfileViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".app.ui.activity.auth.ProfileActivity">
+
+        <include
+            android:id="@+id/profile"
+            layout="@layout/layout_product_details"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/profile_detail_const"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/_20DP"
+            android:paddingTop="@dimen/_15DP"
+            android:paddingEnd="@dimen/_20DP"
+            android:paddingBottom="@dimen/_15DP"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/profile">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/iv_profile_circle"
+                android:layout_width="@dimen/_80DP"
+                android:layout_height="@dimen/_80DP"
+                android:src="@drawable/profile_logo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_profile_circle"
+                style="@style/subheading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text='@{responseData.first_name.isEmpty() ? "" : responseData.first_name.substring(0, 1) + "" + (responseData.last_name.isEmpty() ? "" : responseData.last_name.substring(0, 1))}'
+                android:textColor="@color/white"
+                android:textSize="40sp"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_profile_circle"
+                app:layout_constraintEnd_toEndOf="@+id/iv_profile_circle"
+                app:layout_constraintStart_toStartOf="@+id/iv_profile_circle"
+                app:layout_constraintTop_toTopOf="@+id/iv_profile_circle" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_profile_name"
+                android:layout_width="@dimen/_0DP"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_15DP"
+                android:layout_marginTop="@dimen/_15DP"
+                android:fontFamily="@font/roboto_medium"
+                android:text='@{responseData.first_name + " " + responseData.last_name}'
+                android:textColor="@color/profile_heading_color"
+                android:textSize="@dimen/_20SP"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/iv_profile_circle"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_emp_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_15DP"
+                android:layout_marginTop="@dimen/_8DP"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@={responseData.user_name}"
+                android:textColor="@color/profile_heading_color"
+                android:textSize="@dimen/_20SP"
+                app:layout_constraintStart_toEndOf="@+id/iv_profile_circle"
+                app:layout_constraintTop_toBottomOf="@+id/tv_profile_name" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_8DP"
+            android:background="@color/sky_FF"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/profile_detail_const" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_0DP"
+            android:fillViewport="true"
+            app:layout_constraintBottom_toTopOf="@+id/tv_version_name"
+            app:layout_constraintTop_toBottomOf="@+id/view1">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_20DP">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/iv_mobile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/mobile"
+                    app:layout_constraintBottom_toBottomOf="@id/tv_mobile"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_mobile_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_15DP"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="@={responseData.contact_no}"
+                    android:textColor="@color/black_1A"
+                    android:textSize="@dimen/_18SP"
+                    app:layout_constraintStart_toEndOf="@+id/iv_mobile"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_mobile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_15DP"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="@string/mobile"
+                    android:textColor="@color/gaycolor"
+                    android:textSize="@dimen/_16SP"
+                    app:layout_constraintStart_toEndOf="@+id/iv_mobile"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_mobile_number" />
+
+                <View
+                    android:id="@+id/mobile_border"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1DP"
+                    android:layout_marginTop="@dimen/_20DP"
+                    android:background="@color/gaycolor"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_mobile" />
+
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/iv_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/location"
+                    app:layout_constraintBottom_toBottomOf="@id/tv_location_type"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tv_location" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8DP"
+                    android:layout_marginTop="@dimen/_15DP"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text='@{responseData.location_code+" ("+responseData.service_center_type+")"}'
+                    android:textColor="@color/black_1A"
+                    android:textSize="@dimen/_18SP"
+                    app:layout_constraintStart_toEndOf="@+id/iv_location"
+                    app:layout_constraintTop_toTopOf="@+id/mobile_border" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_location_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8DP"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="@string/location_type"
+                    android:textColor="@color/gaycolor"
+                    android:textSize="@dimen/_16SP"
+                    app:layout_constraintStart_toEndOf="@+id/iv_location"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_location" />
+
+                <View
+                    android:id="@+id/location_border"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1DP"
+                    android:layout_marginTop="@dimen/_20DP"
+                    android:background="@color/gaycolor"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_location_type" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/iv_dc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/user_head"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_role"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tv_dc_head" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_dc_head"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_15DP"
+                    android:layout_marginTop="@dimen/_15DP"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="@={responseData.group_code}"
+                    android:textColor="@color/black_1A"
+                    android:textSize="@dimen/_18SP"
+                    app:layout_constraintStart_toEndOf="@+id/iv_dc"
+                    app:layout_constraintTop_toBottomOf="@+id/location_border" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_role"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_15DP"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="@string/role"
+                    android:textColor="@color/gaycolor"
+                    android:textSize="@dimen/_16SP"
+                    app:layout_constraintStart_toEndOf="@+id/iv_dc"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_dc_head" />
+
+                <View
+                    android:id="@+id/dc_head_border"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1DP"
+                    android:layout_marginTop="@dimen/_20DP"
+                    android:background="@color/gaycolor"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_role" />
+
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/iv_last_login_details"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/logout"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_last_login"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tv_date_time" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_date_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_15DP"
+                    android:layout_marginTop="@dimen/_15DP"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="@={responseData.last_login}"
+                    android:textColor="@color/black_1A"
+                    android:textSize="@dimen/_18SP"
+                    app:layout_constraintStart_toEndOf="@+id/iv_last_login_details"
+                    app:layout_constraintTop_toBottomOf="@+id/dc_head_border" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_last_login"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_15DP"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="@string/last_login"
+                    android:textColor="@color/gaycolor"
+                    android:textSize="@dimen/_16SP"
+                    app:layout_constraintStart_toEndOf="@+id/iv_last_login_details"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_date_time" />
+
+                <View
+                    android:id="@+id/login_border"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1DP"
+                    android:layout_marginTop="@dimen/_20DP"
+                    android:background="@color/gaycolor"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_last_login" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/const_change_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/login_border">
+
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/iv_change_password_details"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_15DP"
+                        android:src="@drawable/password_change"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tv_change_password"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_8DP"
+                        android:layout_marginTop="@dimen/_16DP"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="@string/change_password"
+                        android:textColor="@color/black_1A"
+                        android:textSize="@dimen/_18SP"
+                        app:layout_constraintStart_toEndOf="@+id/iv_change_password_details"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/tv_password_next"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_15DP"
+                        android:layout_marginTop="@dimen/_15DP"
+                        android:layout_marginEnd="9dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:padding="@dimen/_5DP"
+                        android:src="@drawable/arrow_move"
+                        android:textColor="@color/gaycolor"
+                        android:textSize="@dimen/_16SP"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <View
+                    android:id="@+id/password_border"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1DP"
+                    android:layout_marginTop="@dimen/_20DP"
+                    android:background="@color/gaycolor"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/const_change_password" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/const_logout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/password_border">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/iv_logout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_15DP"
+                        android:src="@drawable/logout"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tv_logout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_8DP"
+                        android:layout_marginTop="@dimen/_16DP"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="@string/logout"
+                        android:textColor="@color/black_1A"
+                        android:textSize="@dimen/_18SP"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/iv_logout"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <View
+                    android:id="@+id/logout_border"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1DP"
+                    android:layout_marginTop="@dimen/_20DP"
+                    android:background="@color/gaycolor"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/const_logout" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_version_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10DP"
+            android:textColor="@color/gaycolor"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

@@ -1,0 +1,18 @@
+{
+  "status": true,
+  "response": {
+    "status-code": 0,
+    "description": "Login successfully",
+    "AUTH_TOKEN": "iyDoIGVTQ3g46RTLR+VxDnhtlIQ7SPlvODA2/AucQ41sXNe26obYsgpMV59VNoRWurSFndeAZdcpdlkpgK6g+BQqUyg0opao9MsHsDwn/Rtf9r4Tq/Wp+aHK2/DN7k72",
+    "user_name": "110663",
+    "customer_code": "110663",
+    "first_name": "Anubhav",
+    "last_name": "Singh",
+    "contact_no": "8795686025",
+    "location_code": "IHQ",
+    "department_code": "TECH",
+    "service_center_type": "Head Office",
+    "last_login": "2024-03-15T14:15:55.612+05:30",
+    "group_code": "OPS_Supervisor_LM"
+  }
+}

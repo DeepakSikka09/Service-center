@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".app.ui.activity.udCalling.BarcodeScannerActivity">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/const_scannerBar"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/white"
+            android:paddingTop="@dimen/_15DP"
+            android:paddingBottom="@dimen/_15DP"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/iv_scannerBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20DP"
+                android:src="@drawable/white_back_arrow"
+                android:tint="@color/black_1A"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_scan_shipment"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_scan_shipment"
+                style="@style/title_text_style"
+                android:layout_marginStart="@dimen/_15DP"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/scan_awb_barcode"
+                app:layout_constraintStart_toEndOf="@id/iv_scannerBack"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.journeyapps.barcodescanner.DecoratedBarcodeView
+                android:id="@+id/ivBarcode"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_margin="@dimen/_20DP"
+                android:background="@color/white"
+                android:visibility="visible"
+                app:layout_constraintBottom_toTopOf="@+id/iv_cross"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_scan_shipment"
+                app:zxing_scanner_layout="@layout/custom_scanner_view">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/iv_flash"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_margin="@dimen/_8DP"
+                    android:src="@drawable/flash_off" />
+
+            </com.journeyapps.barcodescanner.DecoratedBarcodeView>
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/iv_cross"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:src="@drawable/invalid"
+                android:layout_marginHorizontal="@dimen/_20DP"
+                app:layout_constraintTop_toBottomOf="@+id/ivBarcode"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginBottom="@dimen/_50DP"
+                app:layout_constraintStart_toStartOf="parent"
+                />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_incorrect"
+                style="@style/title_text_style"
+                android:layout_marginStart="@dimen/_15DP"
+                android:layout_marginTop="@dimen/_10DP"
+                android:fontFamily="@font/roboto_medium"
+                android:visibility="gone"
+                android:text=""
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/iv_cross" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

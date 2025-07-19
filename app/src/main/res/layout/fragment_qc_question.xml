@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <!-- Add data binding variables here, if any -->
+    </data>
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+      android:id="@+id/main_constraint"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/customer_constraint"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_0DP"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/view1"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_customer"
+            style="@style/description_text_style2"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_0DP"
+            android:layout_marginTop="@dimen/_5DP"
+            android:text="Image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewPagerImages"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_0DP"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="@dimen/_16DP"
+            android:layout_marginTop="@dimen/_10DP"
+            android:layout_marginBottom="@dimen/_10DP"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/dots_indicator_ci"
+            app:layout_constraintTop_toBottomOf="@+id/tv_customer" />
+
+        <com.tbuonomo.viewpagerdotsindicator.SpringDotsIndicator
+            android:id="@+id/dots_indicator_ci"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_0DP"
+            android:layout_marginTop="@dimen/_5DP"
+            android:layout_marginBottom="@dimen/_10DP"
+            app:dotsColor="@color/blue_96"
+            app:dotsCornerRadius="@dimen/_8DP"
+            app:dotsSize="@dimen/_10DP"
+            app:dotsSpacing="@dimen/_4DP"
+            app:dotsWidthFactor="2.5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:progressMode="true"
+            app:selectedDotColor="@color/blue_96" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_8DP"
+        android:layout_marginTop="@dimen/_5DP"
+        android:visibility="visible"
+        android:background="@color/sky_FF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/image_constraint" />
+
+      <androidx.constraintlayout.widget.ConstraintLayout
+          android:id="@+id/image_constraint"
+          android:layout_width="match_parent"
+          android:layout_height="@dimen/_0DP"
+          android:layout_marginTop="@dimen/_8DP"
+          android:padding="@dimen/_10DP"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintBottom_toTopOf="@+id/button_const">
+
+          <com.google.android.material.textview.MaterialTextView
+              android:id="@+id/tvInstructions"
+              style="@style/description_text_style2"
+              android:layout_marginStart="@dimen/_20DP"
+              android:textSize="@dimen/_20SP"
+              android:tint="@color/black_1A"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toTopOf="parent" />
+
+          <androidx.constraintlayout.widget.ConstraintLayout
+              android:id="@+id/radio_constraint"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="@dimen/_8DP"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toBottomOf="@+id/tvInstructions">
+
+              <RadioGroup
+                  android:id="@+id/radio_group"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginHorizontal="@dimen/_20DP"
+                  android:orientation="horizontal"
+                  app:layout_constraintStart_toStartOf="parent"
+                  app:layout_constraintTop_toTopOf="parent">
+
+
+                  <com.google.android.material.radiobutton.MaterialRadioButton
+                      android:id="@+id/yes_radio"
+                      style="@style/subheading"
+                      android:layout_width="0dp"
+                      android:layout_weight="1"
+                      android:backgroundTint="@color/radio_color"
+                      android:buttonTint="@color/black"
+                      android:fontFamily="@font/roboto_medium"
+                      android:paddingStart="@dimen/_10DP"
+                      android:text="Yes"
+                      android:textColor="@color/black"
+                      android:textSize="@dimen/_18SP" />
+
+                  <!-- android:background="@drawable/curved_rectangle_white_four_side"-->
+
+                  <com.google.android.material.radiobutton.MaterialRadioButton
+                      android:id="@+id/no_radio"
+                      style="@style/subheading"
+                      android:layout_width="0dp"
+                      android:layout_weight="1"
+                      android:backgroundTint="@color/radio_color"
+                      android:buttonTint="@color/black"
+                      android:fontFamily="@font/roboto_medium"
+                      android:paddingStart="@dimen/_10DP"
+                      android:text="No"
+                      android:textColor="@color/black"
+                      android:textSize="@dimen/_18SP" />
+
+              </RadioGroup>
+          </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+      </androidx.constraintlayout.widget.ConstraintLayout>
+
+      <androidx.constraintlayout.widget.ConstraintLayout
+          android:id="@+id/button_const"
+          android:layout_width="match_parent"
+          android:layout_height="0dp"
+          android:background="@drawable/curved_rectangle_white_two_side"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="parent">
+
+          <View
+              android:id="@+id/btn_view"
+              android:layout_width="match_parent"
+              android:layout_height="@dimen/_1DP"
+              android:background="@color/sky_FF"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toTopOf="parent" />
+
+          <com.google.android.material.button.MaterialButton
+              android:id="@+id/submitBtn"
+              style="@style/custombutton"
+              android:layout_margin="@dimen/_20DP"
+              android:text="@string/submit"
+              app:layout_constraintTop_toTopOf="parent"
+              app:layout_constraintBottom_toBottomOf="parent"
+              app:layout_constraintStart_toStartOf="parent" />
+
+      </androidx.constraintlayout.widget.ConstraintLayout>
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

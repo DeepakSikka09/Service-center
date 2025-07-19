@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@drawable/con_bg"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/con"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10DP"
+                android:background="@color/white"
+                android:padding="@dimen/_16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/mi_filter"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_filter"
+                    style="@style/subheading"
+                    android:layout_marginStart="@dimen/_5DP"
+                    android:text="@string/filter"
+                    android:textSize="@dimen/_16SP"
+                    android:tint="@color/black_1A"
+                    app:layout_constraintLeft_toRightOf="@+id/filter"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/close"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_7DP"
+                    android:src="@drawable/close"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:background="@color/light_grey_ec"
+                app:layout_constraintTop_toBottomOf="@+id/con" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/conMain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_1DP"
+                android:background="@color/white"
+                android:paddingStart="@dimen/_16DP"
+                android:paddingEnd="@dimen/_16DP"
+                app:layout_constraintTop_toBottomOf="@+id/con">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/con1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10DP"
+                    android:background="@color/white"
+                    android:paddingBottom="@dimen/_15DP"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintWidth_percent="0.4">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/orderType"
+                        style="@style/subheading"
+                        android:gravity="start"
+                        android:text="Order Type"
+                        android:textSize="@dimen/_16SP"
+                        android:tint="@color/black_1A"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <View
+                    android:id="@+id/view"
+                    android:layout_width="1dp"
+                    android:layout_height="0dp"
+                    android:background="@color/light_grey_ec"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/con1"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/con2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:minHeight="200dp"
+                    app:layout_constraintStart_toEndOf="@+id/view"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/rvpCheck"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:buttonIcon="@drawable/custom_checkbox"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        style="@style/description_text_style"
+                        android:paddingStart="@dimen/_10DP"
+                        android:layout_marginStart="@dimen/_10DP"
+                        android:layout_marginTop="@dimen/_10DP"
+                        android:text="RVP" />
+
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/fwdCheck"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:buttonIcon="@drawable/custom_checkbox"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/rvpCheck"
+                        style="@style/description_text_style"
+                        android:paddingStart="@dimen/_10DP"
+                        android:layout_marginStart="@dimen/_10DP"
+                        android:layout_marginTop="@dimen/_10DP"
+                        android:text="FWD" />
+
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/rtsCheck"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:buttonIcon="@drawable/custom_checkbox"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/fwdCheck"
+                        style="@style/description_text_style"
+                        android:paddingStart="@dimen/_10DP"
+                        android:layout_marginStart="@dimen/_10DP"
+                        android:layout_marginTop="@dimen/_10DP"
+                        android:text="RTS" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:id="@+id/viewBottom"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/light_grey_ec"
+                app:layout_constraintTop_toBottomOf="@+id/conMain"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:background="@color/white"
+                android:paddingTop="@dimen/_15DP"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/conMain">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnClear"
+                    style="@style/buttoncommonstyle"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_55DP"
+                    android:layout_marginStart="@dimen/_16DP"
+                    android:layout_marginEnd="@dimen/_15DP"
+                    android:layout_marginBottom="@dimen/_20DP"
+                    android:background="@drawable/clear_filter"
+                    android:text="Clear"
+                    android:textColor="@color/blue_FC"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/btnApply"
+
+                    />
+
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnApply"
+                    style="@style/buttoncommonstyle"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_55DP"
+                    android:layout_marginStart="@dimen/_16DP"
+                    android:layout_marginEnd="@dimen/_16DP"
+                    android:layout_marginBottom="@dimen/_20DP"
+                    android:background="@drawable/custom_button_10dp"
+                    android:text="@string/apply"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintWidth_percent="0.45" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

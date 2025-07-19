@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_20DP"
+            android:padding="@dimen/_20DP"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@drawable/captured_image_bg">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/headingTv"
+                style="@style/subheading"
+                android:layout_width="@dimen/_0DP"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_21SP"
+                android:text="@string/sal_tally_already_done"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/alertTv"
+                style="@style/subheading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/_20DP"
+                android:text="@string/awb"
+                android:layout_marginTop="@dimen/_20DP"
+                android:drawableStart="@drawable/ic_tally_alert"
+                app:layout_constraintEnd_toStartOf="@id/awbTv"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/headingTv" />
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/awbTv"
+                android:layout_width="@dimen/_0DP"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@+id/alertTv"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/alertTv"
+                style="@style/subheading"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/scanBtn"
+                android:layout_width="@dimen/_0DP"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5DP"
+                android:background="@drawable/custom_button_10dp"
+                app:backgroundTint="@null"
+                android:text="@string/scan_next_shipment"
+                android:textColor="@color/white"
+                style="@style/subheading"
+                android:layout_marginTop="@dimen/_20DP"
+                app:layout_constraintTop_toBottomOf="@id/alertTv"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

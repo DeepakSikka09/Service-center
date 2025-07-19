@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_question"
+            style="@style/subheading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10DP"
+            android:maxLines="2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint_button"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_0DP"
+            android:layout_marginTop="@dimen/_8DP"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_question">
+
+           <RadioGroup
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               app:layout_constraintTop_toTopOf="parent"
+               android:orientation="vertical">
+
+             <RadioButton
+                 android:id="@+id/rd_yes"
+                 android:layout_width="match_parent"
+                 android:layout_height="@dimen/_40DP"
+                 android:text="@string/yes"
+                 android:textSize="@dimen/_18SP"
+                 android:buttonTint="@color/black"
+                 android:fontFamily="@font/roboto_medium"
+                 android:paddingStart="@dimen/_7DP"
+                 android:textColor="@color/black"
+                 />
+
+               <RadioButton
+                   android:id="@+id/rd_no"
+                   android:layout_width="match_parent"
+                   android:layout_height="@dimen/_35DP"
+                   android:text="@string/no"
+                   android:buttonTint="@color/black"
+                   android:fontFamily="@font/roboto_medium"
+                   android:textSize="@dimen/_18SP"
+                   android:paddingStart="@dimen/_7DP"
+                   android:textColor="@color/black"
+                   />
+           </RadioGroup>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

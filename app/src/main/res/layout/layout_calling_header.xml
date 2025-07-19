@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/sky_FF"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/iv_speaker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/speaker"
+            android:layout_marginStart="@dimen/_20DP"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/cl_header"
+            app:layout_constraintBottom_toBottomOf="@id/cl_header"
+            />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_calling_heading"
+            style="@style/subheading"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10DP"
+            android:layout_marginEnd="@dimen/_8DP"
+            android:gravity="center"
+            android:padding="@dimen/_15DP"
+            android:text="Call in Progress"
+            android:textColor="@color/green_9E"
+            android:textSize="@dimen/_16SP"
+            app:layout_constraintEnd_toStartOf="@+id/iv_callEnd"
+            app:layout_constraintStart_toEndOf="@id/iv_speaker"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/iv_callEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/callend"
+            android:layout_marginEnd="@dimen/_20DP"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/cl_header"
+            app:layout_constraintBottom_toBottomOf="@id/cl_header"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

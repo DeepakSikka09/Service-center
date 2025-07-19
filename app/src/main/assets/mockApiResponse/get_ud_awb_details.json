@@ -1,0 +1,49 @@
+{
+  "status": true,
+  "response": {
+    "description": "Success",
+    "awb_details": {
+      "awb_no": 715547255,
+      "order_id": "403-0804865-2889122-2889",
+      "product_type": "FWD",
+      "payment_type": "COD",
+      "ud_time_stamp": "2024-10-11 04:31 AM",
+      "ud_type": "",
+      "ud_reason_code": "RSN_00_30",
+      "ud_reason_code_name": "Address locatable",
+      "consignee_details": {
+        "consignee_name": "Vinayaka",
+        "consignee_address": "Hisar Hisar Hisar - 125001",
+        "consignee_mobile": null,
+        "city": "HISAR",
+        "pincode": "125001"
+      },
+      "shipper_name": "TEST SHIPPER",
+      "shipper_code": "32012",
+      "product_description": "Shirt",
+      "fe_name": "ESPPAutomation ESPPAutomation",
+      "fe_emp_code": "AUTOTEST56",
+      "fe_number": 9306715875,
+      "ud_location": {
+        "fe_lat": 27.396648,
+        "fe_long": 95.16757,
+        "consignee_lat": 29.157688,
+        "consignee_long": 75.728966
+      },
+      "callbridge_details": [
+        {
+          "callbridge_number": "8795686025",
+          "pin": 6094,
+          "vendor_name": "Bharti Airtel Limited"
+        },
+        {
+          "callbridge_number": "8795686012",
+          "pin": 7194,
+          "vendor_name": "Bharti Airtel Limited"
+        }
+      ],
+      "actionalble_days_max_limit": 7,
+      "max_call_count":5
+    }
+  }
+}

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/awb_order_constraint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingTop="@dimen/_15DP"
+        android:paddingBottom="@dimen/_20DP"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/awb_constraint"
+            android:layout_width="@dimen/_0DP"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/awb"
+                style="@style/title_text_style"
+                android:layout_width="wrap_content"
+                android:layout_marginStart="@dimen/_20DP"
+                android:text="@string/awb"
+                android:tint="@color/black_1A"
+                app:layout_constraintBottom_toBottomOf="@id/tv_awb_no"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tv_awb_no" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_awb_no"
+                style="@style/title_text_style"
+                android:maxLines="1"
+                app:layout_constraintStart_toEndOf="@id/awb"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/order_constraint"
+            android:layout_width="@dimen/_0DP"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_8DP"
+            app:layout_constraintEnd_toStartOf="@+id/orderType"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/awb_constraint">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_order"
+                style="@style/description_text_style2"
+                android:layout_width="wrap_content"
+                android:layout_marginStart="@dimen/_20DP"
+                android:text="@string/order_id"
+                android:textSize="@dimen/_16SP"
+                android:tint="@color/black_1A"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_order_no"
+                style="@style/description_text_style2"
+                android:layout_width="@dimen/_0DP"
+                android:maxLines="1"
+                android:text=""
+                android:textSize="@dimen/_16SP"
+                android:layout_marginStart="@dimen/_5DP"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tv_order"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/orderType"
+            style="@style/subheading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_20DP"
+            android:background="@drawable/custom_progressbar_horizontal"
+            android:paddingHorizontal="@dimen/_10DP"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/order_constraint"
+            app:layout_constraintTop_toTopOf="@id/awb_constraint" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
